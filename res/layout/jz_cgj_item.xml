@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:weightSum="100" >
+
+    <!--
+    71  11%
+	325＝396-71   51%
+	167＝563-396  26%
+	77＝640-563   12%
+    -->
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="11"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/big_l" />
+
+    <ImageView
+        android:id="@+id/iv_nation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="16"/>
+
+    <TextView
+        android:id="@+id/tv_nation_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_weight="34"
+        android:text="美国"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/big_m" />
+
+    <TextView
+        android:id="@+id/tv_sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="12"
+        android:gravity="center"
+        android:text="2.62"
+        android:textColor="#bf4800"
+        android:textSize="@dimen/big_l" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="12" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="@drawable/cb_jz_cgj_selector"
+            android:layout_centerInParent="true"
+            android:drawablePadding="0dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </RelativeLayout>
+
+</LinearLayout>

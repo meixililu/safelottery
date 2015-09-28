@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="fill_parent"
+	android:background="@drawable/select_dialog_bg">
+
+    <TextView 
+        android:id="@+id/charge_scu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:text="提示"
+        android:textSize="@dimen/title"
+        android:paddingLeft="@dimen/margin_10"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:background="@drawable/top_bg"
+        />
+    
+        <TextView 
+	        android:id="@+id/charge_scu_text"
+	        android:layout_below="@+id/charge_scu_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dip"
+	        android:layout_marginRight="10dip"
+	        android:layout_marginTop="5dip"
+	        android:layout_marginBottom="10dip"
+	        android:textSize="@dimen/bigger_s"
+	        android:text="服务器处理成功，请在3-5分钟后，查看充值结果。"
+	        android:textColor="@color/text_grey"
+	        />
+    
+        <LinearLayout 
+            android:id="@+id/charge_scu_bottom"
+            android:layout_below="@+id/charge_scu_text"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_marginTop="2dip"
+            android:background="@color/bottom_button_bg"
+            android:gravity="center"
+            >
+            
+        <Button 
+		    android:id="@+id/charge_scu_btn_sure"
+		    android:layout_weight="1"
+			android:layout_width="100dip" 
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/big_s"
+			android:text="确定"
+			android:gravity="center"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:textColor="@drawable/tcolor_black_to_gray_selector"
+			android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+			/>
+		
+        </LinearLayout>
+    
+</RelativeLayout>

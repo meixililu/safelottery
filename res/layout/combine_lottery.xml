@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        >
+	    <RadioGroup
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:paddingBottom="5dp"
+	        android:background="@drawable/combin__viewpager_banner_bg"
+	        >
+	
+	        <RadioButton
+	            android:id="@+id/combin_lottery_radio_progress"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:button="@null"
+	            android:checked="true"
+	            android:drawableRight="@drawable/combine_sort_down"
+	            android:gravity="center"
+	            android:paddingRight="22dp"
+	            android:paddingLeft="22dp"
+	            android:text="进度"
+	            android:textColor="@drawable/tcolor_lightred_to_darkblack_selector"
+	            android:textSize="@dimen/big_l" />
+	
+	        <RadioButton
+	            android:id="@+id/combin_lottery_radio_amount"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:button="@null"
+	            android:drawableRight="@drawable/combine_sort_down"
+	            android:gravity="center"
+	            android:paddingRight="22dp"
+	            android:paddingLeft="22dp"
+	            android:text="总额"
+	            android:textColor="@drawable/tcolor_lightred_to_darkblack_selector"
+	            android:textSize="@dimen/big_l" />
+	
+	        <RadioButton
+	            android:id="@+id/combin_lottery_radio_search"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:drawableRight="@drawable/search"
+	            android:paddingRight="23dp"
+	            android:paddingLeft="21dp"
+	            android:text="搜索"
+	            android:button="@null"
+	            android:gravity="center"
+	            android:textColor="@drawable/tcolor_lightred_to_darkblack_selector"
+	            android:textSize="@dimen/big_l" />
+	    </RadioGroup>
+	    <ImageView
+	        android:id="@+id/cursor"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:scaleType="matrix"
+	        android:src="@drawable/combine_viewpager_cour" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/combine_lottery_view_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+</LinearLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/account_take_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="账户提款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/account_take_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="20dip" >
+
+            <RelativeLayout
+                android:id="@+id/account_take_bank_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector" >
+
+                <LinearLayout
+                    android:id="@+id/account_take_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip" >
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/visa" />
+
+                    <TextView
+                        android:layout_width="180dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:text="网上银行提款"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/bigger_s" />
+
+                    <ImageView
+                        android:id="@+id/account_take_record_expand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_take_record_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/account_take_bank_layout"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector" >
+
+                <LinearLayout
+                    android:id="@+id/account_take_record"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip" >
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/take_record" />
+
+                    <TextView
+                        android:layout_width="180dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:text="提款记录"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/bigger_s" />
+
+                    <ImageView
+                        android:id="@+id/account_take_record_expand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dip"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/account_take_remind_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_take_record_layout"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_360"
+                android:paddingBottom="10dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/china_unicom_charge_remind_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:src="@drawable/remind" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:layout_toRightOf="@+id/china_unicom_charge_remind_image"
+                        android:text="重要提示："
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/big_s" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/china_unicom_charge_remind_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="2dip"
+                    android:text="@string/withdrawal_prompt_1"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/take_bank_remind_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/withdrawal_prompt_2"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/take_bank_remind_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/withdrawal_prompt_3"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

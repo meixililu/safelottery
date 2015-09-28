@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_update_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:minHeight="25dp"
+        >
+        <Button
+            android:id="@+id/download_cancle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_btn_close_selector"
+            android:textSize="@dimen/big_l" />
+        
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="6dp"
+        >
+        <TextView
+            android:id="@+id/normal_dialog_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="有可更新的版本，是否更新？"
+            android:textColor="@color/text_grey"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:textSize="@dimen/bigger_s" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dip" >
+		
+        <Button
+            android:id="@+id/download_background"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+            android:text="更  新 "
+            android:textColor="@drawable/tcolor_white_to_black_selector"
+            android:textSize="@dimen/big_l" />
+        
+        <TextView
+            android:id="@+id/download_browser"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:gravity="center"
+            android:background="@color/none"
+            android:text="更新失败，请点击此处更新"
+            android:textColor="@drawable/tcolor_gray_to_black_selector"
+            android:textSize="@dimen/middle_m" />
+        
+    </LinearLayout>
+
+</LinearLayout>

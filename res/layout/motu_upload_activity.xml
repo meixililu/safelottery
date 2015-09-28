@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="魔图选号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <com.polites.android.GestureImageView
+        android:id="@+id/motu_img"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        gesture-image:max-scale="10.0"
+        gesture-image:min-scale="0.75" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_motu_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <FrameLayout
+            android:id="@+id/motu_submit"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_motu_red"
+                android:gravity="center"
+                android:text="获取幸运号码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bigger_m" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

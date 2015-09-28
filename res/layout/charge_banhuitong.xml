@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/alipay_charge_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="储蓄卡快捷充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/alipay_charge_title_bar"
+        android:layout_marginBottom="10dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/alipay_charge_money"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="15dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:text="充值金额"
+                    android:textSize="@dimen/bigger_l" />
+
+                <EditText
+                    android:id="@+id/charge_fillin_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:hint="充值金额请填写整数"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alipay_charge_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/alipay_charge_money"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="15dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:text="手  机  号"
+                    android:textSize="@dimen/bigger_l" />
+
+                <EditText
+                    android:id="@+id/charge_fillin_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:hint="请输入您的手机号"
+                    android:imeOptions="actionDone"
+                    android:maxLength="15"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/alipay_charge_button"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_below="@+id/alipay_charge_phone"
+                android:layout_marginLeft="105dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                android:gravity="center"
+                android:text="提交信息"
+                android:textColor="@drawable/tcolor_black_to_gray_selector"
+                android:textSize="@dimen/bigger_s" />
+
+            <RelativeLayout
+                android:id="@+id/alipay_charge_remind_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alipay_charge_button"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_360"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:id="@+id/alipay_charge_remind_image"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:src="@drawable/remind" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/alipay_charge_remind_image"
+                    android:text="提醒"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/big_s" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alipay_charge_remind_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="1.储蓄卡快捷支付,支持以下银行："
+                    android:gravity="left"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/bigger_s" />
+
+                <TextView
+                    android:id="@+id/showBank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/bank2"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/middle_l" />
+                
+                
+                     <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showBank"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="2.支持额度："
+                    android:gravity="left"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/bigger_s" />
+                
+                
+                 <TextView
+                    android:id="@+id/showwarn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="单卡单笔2000元,单卡单日2000元,单卡每月5000元"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/middle_l" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/alipay_safe_charge_zch_tell"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@id/alipay_charge_remind_layout"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="中彩汇充值中心客服电话  400-00-58511"
+                    android:textSize="@dimen/middle_m" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/expand" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

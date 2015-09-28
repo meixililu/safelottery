@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.zch.safelottery"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+	
+    <TextView
+        android:id="@+id/user_setting_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/middle_l"
+        android:text="" />
+
+    <com.zch.safelottery.order.DragSortListView
+        xmlns:dslv="http://schemas.android.com/apk/res/com.zch.safelottery"
+        android:id="@+id/user_setting_sort_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/none"
+        android:divider="@color/none"
+        android:background="#00000000"
+        app:collapsed_height="10dp"
+        app:drag_scroll_start="0.33"
+        dslv:float_background_color="#00000000"
+        dslv:max_drag_scroll_speed="0.3"
+        dslv:remove_mode="none"
+        dslv:track_drag_scroll="false" >
+    </com.zch.safelottery.order.DragSortListView>
+
+</LinearLayout>

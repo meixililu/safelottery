@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentTop="true"
+	android:gravity="center_vertical"
+	android:padding="8dp"
+	>
+	<TextView
+	    android:id="@+id/changci"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_black"
+		android:textSize="@dimen/big_l"
+		android:gravity="center"
+		android:layout_weight="1"
+		/>
+	<TextView
+	    android:id="@+id/duizhang"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_black"
+		android:textSize="@dimen/big_l"
+		android:gravity="center"
+		android:layout_weight="3"
+		/>
+	<TextView
+	    android:id="@+id/touzhu"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_blue"
+		android:textSize="@dimen/big_l"
+		android:gravity="center"
+		android:layout_weight="1"
+		/>
+	
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1"
+		>
+		<CheckBox 
+	 		android:id="@+id/danma"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
+	        android:background="@drawable/bg_dan_selector"
+	       	android:gravity="center"
+	        android:button="@null"
+	        />
+	</LinearLayout>
+</LinearLayout>

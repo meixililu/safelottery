@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="消息详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/message_details_title_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bigest_m" />
+
+            <com.zch.safelottery.pulltorefresh.PullToRefreshWebView
+                android:id="@+id/web_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loadding_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

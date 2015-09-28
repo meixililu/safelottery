@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/china_moblie_charge_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="充值卡充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/china_moblie_charge_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_360"
+                android:paddingBottom="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:drawableLeft="@drawable/remind"
+                    android:drawablePadding="@dimen/content_padding_lr"
+                    android:text="提醒"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="\t请务必选择与您的充值卡实际面额一致的金额，否则会导致交易失败。根据运营商规定，交易金额将无法退还，损失由用户自行承担，本公司概不负责。"
+                    android:textColor="@color/content_txt_red"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/china_moblie_charge_type_lny"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/content_padding_top"
+                android:layout_marginBottom="@dimen/content_padding_tb" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="卡类型："
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/bigest_m" />
+
+                <Button
+                    android:id="@+id/china_moble_charge_operators_elect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择"
+                    android:textColor="@color/text_dark"
+                    android:gravity="left|center_vertical"
+                    android:background="@drawable/spinner_bg_type1_selector"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="充值面额："
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/bigest_m" />
+
+                <LinearLayout
+                    android:id="@+id/china_moblie_charge_denomination"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dip" >
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="卡号(序列号)："
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/bigest_m" />
+
+            <EditText
+                android:id="@+id/china_moblie_charge_number"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_weight="1"
+                android:background="@drawable/choice_charge_bg"
+                android:hint="请输入卡号"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="17"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="密码 ："
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/bigest_m" />
+
+            <EditText
+                android:id="@+id/china_moblie_charge_password"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/choice_charge_bg"
+                android:hint="请输入充值卡密码"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="18"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/china_moblie_charge_button"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="92dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                android:gravity="center"
+                android:text="提交信息"
+                android:textColor="@drawable/tcolor_black_to_gray_selector"
+                android:textSize="@dimen/bigest_m" />
+
+            <LinearLayout
+                android:id="@+id/china_moblie_charge_remind_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_360"
+                android:paddingBottom="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:drawableLeft="@drawable/remind"
+                    android:drawablePadding="@dimen/content_padding_lr"
+                    android:text="提醒"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/china_moblie_charge_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="2dip"
+                    android:text="@string/charge_remind"
+                    android:textColor="@color/content_txt_A"
+                    android:textSize="@dimen/middle_l" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/china_moblie_charge_zch_tell"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="中彩汇充值中心客服电话  400-00-58511"
+                    android:textSize="@dimen/middle_l" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/expand" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

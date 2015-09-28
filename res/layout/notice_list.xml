@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+
+        <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+            android:id="@+id/notice_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/none"
+            android:divider="@color/none"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:listSelector="@color/none"
+            android:fastScrollEnabled="false"
+		    android:footerDividersEnabled="false"
+		    android:headerDividersEnabled="false"
+		    android:smoothScrollbar="true"
+            />
+
+        <ProgressBar
+            android:id="@+id/loadding_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/no_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="暂无消息!"
+            android:visibility="gone" />
+</FrameLayout>

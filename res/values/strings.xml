@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">中彩票</string>
+
+	<string name="tab_main_nav_buy">购彩</string>
+	<string name="tab_main_nav_combine">合买</string>
+	<string name="tab_main_nav_lottery_hall">开奖</string>
+	<string name="tab_main_nav_personcentered">我的</string>
+	<string name="tab_main_nav_message">彩票资讯</string>
+	<string name="tab_main_nav_more">更多</string>
+
+	<string name="newest_lottery_open_getdata_prompt">正在获取下一期数据...</string>
+	<string name="newest_lottery_open_issue_prompt">距离第0期结束还剩</string>
+	<string name="newest_lottery_open_issue_prompt_jc">易猜易中</string>
+	<string name="newest_lottery_open_issue_prompt_temp">即将推出，敬请期待</string>
+	<string name="newest_lottery_open_remaintime_prompt">0天0小时0分钟0秒</string>
+	<string name="newest_lottery_open_remaintime_prompt_jc">返奖率高达69%</string>
+	<string name="newest_lottery_open_remaintime_prompt_bd">返奖率高达65%</string>
+
+	<string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+	<string name="pull_to_refresh_release_label">松开可以刷新</string>
+	<string name="pull_to_refresh_refreshing_label">正在刷新...</string>
+	
+	<string name="pull_to_refresh_from_bottom_pull_label">上拉加载下一页</string>
+    <string name="pull_to_refresh_from_bottom_release_label">松开加载下一页</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">正在加载...</string>
+	
+	<string name="spinner_prompt_type">请选择彩种类型</string>
+	<string name="spinner_prompt_number">请选择注数</string>
+	<string name="spinner_prompt_result">请选择开奖类型</string>
+	<string name="spinner_prompt_method">请选择购买方式</string>
+	<string name="cz_14_choice_declare1">（请选择14场，蓝色数字为平均赔率）</string>
+	<string name="cz_rx9_choice_declare1">（请至少选择9场比赛）</string>
+	<string name="cz_sfc_spinner_prompt_type">请选期次</string>
+
+	<string name="pl3_zx_prompt">每位各选1个或多个号码投注，所选号码与开奖号码一致，且顺序相同，即中奖，单注奖金1000元。
+	</string>
+	<string name="pl3_zs_prompt">选择2个或更多号码投注，若当期开奖号码形态为组三（3个号码有2个相同）且包含了投注号码，即中奖！奖金：320元！
+	</string>
+	<string name="pl3_zl_prompt">选择3个或更多号码投注，若当期开奖号码形态为组六（3个号码各不相同）且包含了投注号码，即中奖！奖金：160元！
+	</string>
+
+	<string name="pks_p1_prompt1">普通选一：至少选择1个号码投注，命中冠军即中奖10元。</string>
+	<string name="pks_p1_prompt2">普通选二：每位至少选择1个号码投注，按位置命中1-2位即中奖2-55元。</string>
+	<string name="pks_p1_prompt3">普通选三：每位至少选择1个号码投注，按位置命中1-3位即中奖2-160元。</string>
+	<string name="pks_p1_prompt4">普通选四：每位至少选择1个号码投注，按位置命中1-4位即中奖2-350元。</string>
+	<string name="pks_p1_prompt5">普通选五：每位至少选择1个号码投注，按位置命中1-5位即中奖2-500元。</string>
+	<string name="pks_p1_prompt6">普通选六：每位至少选择1个号码投注，按位置命中2-6位即中奖2-10000元。</string>
+	<string name="pks_p1_prompt7">普通选七：每位至少选择1个号码投注，按位置命中2-7位即中奖2-20000元。</string>
+	<string name="pks_p1_prompt8">普通选八：每位至少选择1个号码投注，按位置命中2-8位即中奖2-40000元。</string>
+	<string name="pks_p1_prompt9">普通选九：每位至少选择1个号码投注，按位置命中2-9位即中奖2-80000元。</string>
+	<string name="pks_p1_prompt10">普通选十：每位至少选择1个号码投注，按位置全部命中即中奖888888元，全不中也得2元。
+	</string>
+	<string name="pks_p1_prompt11">精准选二：每位至少选择1个号码投注，按位置全部命中即中奖90元。</string>
+	<string name="pks_p1_prompt12">精准选三：每位至少选择1个号码投注，按位置全部命中即中奖700元。</string>
+	<string name="pks_p1_prompt13">精准选四：每位至少选择1个号码投注，按位置全部命中即中奖5000元。</string>
+
+	<string name="hftx">汇付天下</string>
+	
+	<string name="leshua">乐刷安全快捷充值</string>
+		<string name="lakala">拉卡拉安全快捷充值</string>
+			<string name="yinlian">银联安全快捷充值</string>
+	<string name="remote_call_failed">Failure calling remote service</string>
+
+	<string name="partnerHint">"partner"</string>
+	<string name="sellerHint">"seller"</string>
+	<string name="out_trade_noHint">"out_trade_no"</string>
+	<string name="subjectHint">"subject"</string>
+	<string name="bodyHint">"body"</string>
+	<string name="total_feeHint">"total_fee"</string>
+	<string name="notify_urlHint">"notify_url"</string>
+	<string name="charsetHint">"charset"</string>
+	<string name="signTypeHint">"signType"</string>
+
+	<string name="no_legal">传入参数不合法</string>
+	<string name="confirm_install_hint">"安装提示"</string>
+	<string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"
+	</string>
+	<string name="regedit_success_prompt">为了您的账户安全，强烈建议您绑定手机号码，并完善您的个人资料信息，否则有可能导致找回密码及提款操作失败！
+	</string>
+	<string name="normal_dialog_content">您确认要退出吗？</string>
+	<string name="withdrawal_prompt_1">
+		1.为了防范可能出现的利用信用卡套现和洗钱行为，保护用户的资金安全，针对购彩账户异常提款做出以下规定：累计消费金额（现金购买彩票成功的累计数）小于累计存入金额（不包含购彩中奖奖金）
+		30%的账户的提款，须致电客服人工申请，同时，提款到账日自提出申请之日起，不少于15天。
+	</string>
+	<string name="withdrawal_prompt_2">
+		2.提款到账时间为发起请求后的1-3个工作日内。
+	</string>
+	<string name="withdrawal_prompt_3">
+		3.提款手续费：提款金额小于2万元，每笔2元；大于或等于2万元且小于5万元，每笔5元；大于或等于5万元，每笔10元。
+	</string>
+	<string name="send_word">
+		我用中彩票手机客户端送你彩票了，祝你中大奖！下载客户端用您的手机号登陆，密码:xxxx，下载地址：www.zch168.com/dw.html
+	</string>
+
+	<string name="Ensure">"确定"</string>
+	<string name="Cancel">"取消"</string>
+	<string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+
+	<string name="jl_time_choice">"选择期数"</string>
+	<string name="btn_show_share_list">显示平台列表</string>
+	<string name="btn_show_more_list">显示更多平台</string>
+	<string name="aboat_qq">2877236876 \n1013272034</string>
+
+	<string name="toast_show_text_0">"至少选择1注进行投注"</string>
+	<string name="toast_show_text_1">"投注金额不能超过2万元"</string>
+	<string name="toast_show_text_2">"您还没选择任何号码"</string>
+	<string name="toast_show_hemai_pursue">发起合买不能追号！</string>
+	
+	<string name="toast_prompt_money_beyond">单次投注金额不能超过2万元</string>
+	<string name="toast_prompt_bank">充值金额不合法</string>
+	
+	<string name="dlt_choice_addto_text">"追加投注"</string>
+	
+	<string name="band_user_illustrate_text">绑定百度账号，绑定之后可以用百度账号登录，同时也可以用绑定的用户名和密码登录。</string>
+	
+	<string name="no_update">LM20120326181 LM20120316166 LM20120326187</string>
+	<string name="no_phone">LM20120411199</string>
+	<string name="no_url_and_update">LM20120326187</string>
+	<string name="disp_youhuima_channel">8001</string>
+	<string name="youhuitext">优惠码由合作推广商发放，可在注册流程使用。使用优惠码注册并绑定手机，可获得相应赠金。</string>
+	<string name="forget_pwd"><u>忘记密码</u></string>
+	<string name="oldoop_text">2013年3月7日前的所有记录，请点击这里查询</string>
+	
+	<string name="bank1">工商银行 \t华夏银行 \t建设银行 \t中国银行 \n中信银行 \t农业银行 \t邮政储蓄 \t民生银行 \n光大银行 \t兴业银行 \t平安银行 \t浦发银行 \n广发银行 </string>
+	<string name="bank2">农业银行 \t招商银行 \t华夏银行 \t中信银行 \n广发银行 \t广州银行 \n交通银行(仅支持广东省,除深圳) </string>
+	<string name="bank3">信用卡：\n中国银行\t工商银行\t建设银行\t光大银行\n\n储蓄卡：\n光大银行</string>
+	
+	<string name="limit">信用卡:\n工商银行(单笔50000元)\n中国银行(无限额)\n建设银行(单笔50000元)\n光大银行(单笔5000元,日累计5000元)\n储蓄卡:\n光大银行(单笔5000元,日累计5000元)</string>
+	<string name="offlinebanktx">用您的农行卡或者存折到农行柜台选择转帐。\n转帐成功后通过下面方式通知客服人员：\n\t1、转帐成功后请拨打客服热线400-00-58511[免长话费]通知本站工作人员,说明转帐相关信息如“汇款姓名+汇款帐号+用户名+实际转帐金额”。\n\t2、汇款时请增加角分零头,比如100.88元,便于客服快速核实处理,您的汇款会更快速到账\n\n对公账户说明：\n\t1、不支持ATM机汇款。\n\t2、17点前的汇款,当天到账；17点以后的汇款,下一个工作日到账;\n\t3、周六、周日汇款,周一到账（如遇法定节假日则顺延）;\n\t4、一般情况,银行每天下午5点下班,无法柜台汇款;\n\t5、汇款后请尽量保留相关汇款凭证,以便需要时与客服核对确认</string>
+
+	<string name="charge_remind">1. 支持中国移动、中国联通、中国电信全国充值卡，请您认真核对输入的卡号和密码，输错三次充值卡将被冻结，如被冻结，请致电我们的客服电话：400-00-58511。\n\n
+	    2. 中国移动、中国联通、中国电信充值卡充值将扣除3%手续费，由支付提供商收取相应手续费。入账金额为扣除手续费后的金额。\n\n
+	    3. 充值完成后，建议您在3-5分钟后查看充值到帐情况。\n\n
+	    4. 请务必选择与您的充值卡实际面额一致的金额，否则会导致交易失败。根据运营商规定，交易金额将无法退还，损失由用户自行承担，本公司概不负责。
+	</string>
+	
+</resources>

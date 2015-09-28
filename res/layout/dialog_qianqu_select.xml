@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:background="@drawable/select_dialog_bg"
+    android:gravity="center">
+    
+	<RelativeLayout
+		android:id="@+id/redball_select_dialog_title_bar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="@dimen/top_banner"
+	    android:background="@drawable/top_bg"
+	    android:gravity="center_vertical">
+		
+		<TextView
+		    android:id="@+id/title_view"
+			android:orientation="vertical"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_marginLeft="@dimen/margin_10"
+		    android:textColor="@color/white"
+		    android:textSize="@dimen/big_l"
+		    android:text="请选择机选前区号码个数"
+		    android:gravity="center_vertical"
+			/>
+	</RelativeLayout>
+
+	<GridView
+		android:id="@+id/redball_select_dialog_grid"  
+		android:layout_below="@+id/redball_select_dialog_title_bar"
+	    android:layout_width="fill_parent"   
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="2dip"
+	    android:layout_marginTop="5dip"
+	    android:paddingBottom="10dp"
+	    android:numColumns="auto_fit"
+	    android:verticalSpacing="5dip"  
+	    android:horizontalSpacing="5dip"  
+	    android:columnWidth="40dip"
+	    android:stretchMode="columnWidth"
+	    android:cacheColorHint="#00000000"
+	    android:listSelector="#00000000"
+	    android:gravity="center"
+	    />
+</RelativeLayout>

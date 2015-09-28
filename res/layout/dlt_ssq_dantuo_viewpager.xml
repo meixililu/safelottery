@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <RadioButton
+            android:id="@+id/xuanhao_putong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pl3_top_btn_zx_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="普通"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_m" />
+
+        <RadioButton
+            android:id="@+id/xuanhao_dantuo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pl3_top_btn_zl_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="胆拖"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_m" />
+    </RadioGroup>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    
+</LinearLayout>

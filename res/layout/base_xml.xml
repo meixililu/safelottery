@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buy_lottery_base_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buy_lottery_base_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner" 
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        >
+		<include layout="@layout/choice_title_bar_tradition"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buy_lottery_base_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/money_count_bg_xml"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <include layout="@layout/choice_button_bet_money"/>
+        <include layout="@layout/choice_button_bottom" />
+        
+    </LinearLayout>
+    
+    <ScrollView
+        android:id="@+id/buy_lottery_base_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buy_lottery_base_bottom"
+        android:layout_below="@id/buy_lottery_base_title_bar"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="gone"
+        >
+		
+    </ScrollView>
+    
+    <LinearLayout
+        android:id="@+id/buy_lottery_base_content_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buy_lottery_base_bottom"
+        android:layout_below="@id/buy_lottery_base_title_bar"
+        android:visibility="gone"
+        android:orientation="vertical"
+        />
+    
+    <LinearLayout
+        android:id="@+id/buy_lottery_base_content_combine"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buy_lottery_base_bottom"
+        android:layout_below="@id/buy_lottery_base_title_bar"
+        android:visibility="gone"
+        android:orientation="vertical"
+        />
+
+</RelativeLayout>

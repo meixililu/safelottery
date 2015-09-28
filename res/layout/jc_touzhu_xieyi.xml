@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/zch_order_list_page_rule_cbx"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:layout_marginLeft="15dip"
+        android:button="@drawable/check_box_selector"
+        android:checked="true"
+        android:paddingLeft="25dp"
+        android:text="我已阅读并同意"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/big_s" />
+
+    <TextView
+        android:id="@+id/zch_order_list_page_rule_content"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:gravity="center_vertical"
+        android:text="《用户服务协议》"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/big_s" />
+
+
+</LinearLayout>

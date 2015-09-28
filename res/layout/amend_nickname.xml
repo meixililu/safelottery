@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/aboat_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/search_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="修改昵称"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginLeft="3dp"
+            android:text="原昵称："
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:id="@+id/amend_nickname_old"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="原昵称原昵称原昵称原昵称原昵称原昵称原昵称原昵称"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <EditText
+            android:id="@+id/amend_nickname_new"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/choice_charge_bg"
+            android:hint="输入新昵称 2-16位字符"
+            android:singleLine="true"
+            android:maxLength="16"
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginLeft="3dp"
+            android:text="昵称只有一次修改机会哦！"
+            android:textColor="@color/red"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/amend_nickname_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bigger_s" />
+    </LinearLayout>
+
+</LinearLayout>

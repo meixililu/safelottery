@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/account_charge_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/check_idcard_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="账户充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/account_charge_title_bar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_list_item_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_phonecall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_top_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/kjpay" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/account_charge_phonecall_tx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="储蓄卡充值（优惠）"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="支持借记卡、无需网银、每日2000元"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_alipay_safe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/alipay_safe" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/account_charge_alipay_safe_tx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="支付宝安全支付"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="安全快捷 免手续费、单笔2000元"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_yinlian"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/buy_lottery_cz_bg_selector"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/kjpay" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:text="银联手机支付"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_kuaijie_safe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/kjpay" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/account_charge_kuaijie_safe_tx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="信用卡（快捷支付）"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="支持14家银行、无手续费、单笔5000元"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_unionpay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_bottom_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/kjpay" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/account_charge_unionpay_tx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="银联快捷支付"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="支持信用卡/储蓄卡,单笔2000元"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/more_list_item_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_banhuitong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_top_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/kjpay" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="储蓄卡（快捷支付）"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="支持7家银行、无手续费、单笔2000元"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_card"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center"
+                    android:padding="13dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/charge_card" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:text="充值卡充值"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_lakala"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center"
+                    android:padding="13dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_lakala" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:text="@string/lakala"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_youhuima_exchange"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center"
+                    android:padding="13dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_yhmyh" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:text="优惠码兑换"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/charge_offline_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_bottom_selector"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/charge_web" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="网站充值"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:id="@+id/charge_web_tx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="电脑IE浏览器访问cp.zch168.com充值"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/middle_s" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/bg_btn_none_to_gray_selector"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/charge_bank" />
+
+                    <TextView
+                        android:layout_width="180dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:text="更多充值"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/account_charge_layout_leshua"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/icon_leshua" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="@string/leshua"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/expand" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/account_charge_layout_china_tellpay"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/tell_pay" />
+
+                <TextView
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="银联电话充值"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/expand" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/more_list_item_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_histroy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_top_selector"
+                    android:gravity="center"
+                    android:padding="13dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/charge_histroy" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:text="充值记录"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/account_charge_layout_zch_tell"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/more_list_item_bottom_selector"
+                    android:gravity="center"
+                    android:padding="13dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="中彩汇充值中心客服电话 400-00-58511"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middle_l" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

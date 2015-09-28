@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/lottery_result_history_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="开奖历史"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center" >
+
+            <include layout="@layout/refresh_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+            android:id="@+id/lottery_result_history_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/none"
+            android:divider="@drawable/line"
+            android:dividerHeight="1dip"
+            android:fastScrollEnabled="false"
+            android:fadingEdge="none"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+            android:layoutAnimation="@anim/list_layout_controller"
+            android:persistentDrawingCache="animation|scrolling" 
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/lottery_result_history_progressbar_m"
+                style="@style/Widget.Sherlock.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/lottery_result_history_text_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据请重试"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/big_m"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

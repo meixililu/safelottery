@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_table_item_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        >
+        <TextView
+            android:id="@+id/buy_lottery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="中彩票"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+        
+        <Button
+            android:id="@+id/buy_lottery_login_or_register"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_none_to_red_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:layout_marginRight="2dp"
+            android:text="登录"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <com.zch.safelottery.pulltorefresh.PullToRefreshScrollView
+            android:id="@+id/buy_lottery_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" 
+            android:fillViewport="true"
+            />
+        <ImageView
+            android:id="@+id/connection_faile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/connection_faile"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/lottery_result_hall_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        
+    </FrameLayout>
+
+</LinearLayout>

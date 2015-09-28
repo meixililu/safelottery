@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="手机绑定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/bound_user_phone_name_user_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/bound_user_phone_user_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户名: "
+                        android:textColor="@color/bg_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:id="@+id/bound_user_phone_user_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="0808"
+                        android:textColor="@color/bg_black"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bound_user_phone_explain_succeet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请妥善保管您的用户名和密码。"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line_xml" />
+
+            <LinearLayout
+                android:id="@+id/bound_user_phone_explain_show"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/prompt_box_bg"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/bound_user_phone_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="为了您的账户安全，请绑定手机号码否则您将无法找回密码"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/bound_user_phone_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="手机号  "
+                    android:textColor="@color/input_box_name"
+                    android:textSize="@dimen/big_m" />
+
+                <EditText
+                    android:id="@+id/bound_user_phone_phone_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/choice_charge_bg"
+                    android:hint="11位手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/bound_user_phone_phone_num"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="18701696347"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/bound_user_phone_get_authcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="获取验证码"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bound_user_phone_authcode_show"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_padding_top"
+                    android:layout_marginRight="@dimen/content_padding_bottom"
+                    android:layout_marginTop="3dp"
+                    android:text="60秒后，如果您还未获取到短信验证码，请重新获取。"
+                    android:textColor="@color/content_txt_6"
+                    android:textSize="@dimen/middle_s" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_padding_top"
+                    android:layout_marginRight="@dimen/content_padding_bottom"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="验证码  "
+                        android:textColor="@color/input_box_name"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/bound_user_phone_authcode"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/choice_charge_bg"
+                        android:hint="输入6位手机验证码"
+                        android:inputType="number"
+                    	android:maxLength="20"
+                        android:singleLine="true"
+                        android:textSize="@dimen/middle_l" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" >
+
+                <Button
+                    android:id="@+id/bound_user_phone_skip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="跳过"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_m" />
+
+                <Button
+                    android:id="@+id/bound_user_phone_finish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="绑定"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

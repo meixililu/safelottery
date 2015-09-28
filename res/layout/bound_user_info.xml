@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="个人信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <com.zch.safelottery.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/bound_user_info_lny"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/registerkey_bound_card_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/bound_user_info_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恭喜您信息完善成功!"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/bound_user_info_name_user_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户名: "
+                        android:textColor="@color/bg_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:id="@+id/bound_user_info_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="0808"
+                        android:textColor="@color/bg_black"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line_xml" />
+
+            <LinearLayout
+                android:id="@+id/bound_user_info_explain_show"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/prompt_box_bg"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="真实姓名、证件类型、证件号码是领奖凭证，必须真实，一旦提交不能更改。"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="真实姓名 : "
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/bound_user_info_real_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/bound_user_info_real_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/choice_charge_bg"
+                    android:hint="输入您的真实姓名"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/bound_user_info_type_lny"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="证件类型 : "
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/bound_user_info_type_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/bound_user_info_type_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg_type1_selector"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:text="身份证"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="证件号码 : "
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/bound_user_info_card_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/bound_user_info_card_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/choice_charge_bg"
+                    android:hint="输入您的真实证件号码"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bound_user_info_phone_show"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_padding_top"
+                android:layout_marginRight="@dimen/content_padding_bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="手机号码: "
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/bound_user_info_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/big_m"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bount_user_info_friendship_show"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/line_xml" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/content_padding_top"
+                    android:layout_marginRight="@dimen/content_padding_bottom"
+                    android:text="如需变更真实信息，请致电24小时服务热线："
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/middle_l" />
+                <TextView
+                    android:id="@+id/bound_user_info_dial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_padding_top"
+                    android:layout_marginRight="@dimen/content_padding_bottom"
+                    android:text="400-00-58511"
+                    android:textColor="@color/text_dark_blue"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bound_user_info_finish"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                android:text="完成"
+                android:textColor="@drawable/tcolor_black_to_gray_selector"
+                android:textSize="@dimen/big_m" />
+        </LinearLayout>
+    </com.zch.safelottery.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

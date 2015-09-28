@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="账户明细"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            layout="@layout/refresh_btn" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/oldoop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:autoLink="web"
+            android:gravity="center"
+            android:text="@string/oldoop_text"
+            android:textColor="@color/text_dark_blue"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:textSize="@dimen/middle_l" />
+    
+    <LinearLayout
+        android:id="@+id/account_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:background="@drawable/bet_record"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="账目明细"
+            android:textColor="@color/content_txt_6"
+            android:textSize="@dimen/middle_l" />
+
+        <TextView
+            android:id="@+id/account_select_text"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:background="@drawable/bet_record_select"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="全部"
+            android:textColor="@color/content_txt_6"
+            android:textSize="@dimen/middle_l" />
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bet_record"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="交易时间"
+            android:textColor="@color/content_txt_6"
+            android:textSize="@dimen/middle_l" />
+
+        <TextView
+            android:id="@+id/account_time"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:background="@drawable/bet_record_select"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="全部"
+            android:textColor="@color/content_txt_6"
+            android:textSize="@dimen/middle_l" />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dp" >
+
+        <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+            android:id="@+id/account_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/none"
+            android:fastScrollEnabled="false"
+            android:fadingEdge="none"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+            android:listSelector="@android:color/transparent"
+            />
+
+        <ProgressBar
+            android:id="@+id/account_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+        
+        <TextView
+            android:id="@+id/account_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="您暂无此类记录!"
+            android:textSize="@dimen/big_s"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

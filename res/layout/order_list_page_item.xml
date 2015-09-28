@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/order_list_page_item_show_delete"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:button="@drawable/bg_btn_show_to_hide_selector" />
+
+        <LinearLayout
+            android:id="@+id/order_list_page_item_ball_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/order_list_page_item_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_list_page_item_redballs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:singleLine="true"
+                    android:text="红球:1,2,3,4,5,6,7"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_list_page_item_blueballs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="蓝球:1,2"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/order_list_page_item_play_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/middle_s"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/order_list_page_item_bet_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dip"
+                    android:text="2注"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_s" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/order_list_page_item_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/expand" />
+
+            <Button
+                android:id="@+id/order_list_page_item_delete_btn"
+                android:layout_width="40dip"
+                android:layout_height="30dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middle_l"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/order_list_page_item_dotted_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/line_dotted" />
+
+</LinearLayout>

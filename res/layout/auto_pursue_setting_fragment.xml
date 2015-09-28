@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bdrq_title"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="基本设置"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/big_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/notice_content_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="    我要追"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <Button
+                    android:id="@+id/auto_pursue_issue_minus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_next_left_selector" />
+
+                <EditText
+                    android:id="@+id/auto_pursue_issue"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <Button
+                    android:id="@+id/auto_pursue_issue_plus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/btn_next_right_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="期 追中即止"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="起始倍数"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <Button
+                    android:id="@+id/auto_pursue_mutiple_minus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_next_left_selector" />
+
+                <EditText
+                    android:id="@+id/auto_pursue_mutiple"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <Button
+                    android:id="@+id/auto_pursue_mutiple_plus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_next_right_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="倍"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bdrq_title"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="盈利设置"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/big_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/notice_content_bg"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/auto_pursue_yll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/bg_rbtn_default_selected_disable_selector"
+                    android:checked="true"
+                    android:paddingLeft="22dip"
+                    android:text="累计盈利不低于"
+                    android:textColor="@drawable/tcolor_gray_to_black_selector"
+                    android:textSize="@dimen/big_m" />
+
+                <EditText
+                    android:id="@+id/auto_pursue_yll_input"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/jc_time_bg"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:text="10"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/auto_pursue_yle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/bg_rbtn_default_selected_disable_selector"
+                    android:paddingLeft="22dip"
+                    android:text="累计盈利不低于"
+                    android:textColor="@drawable/tcolor_gray_to_black_selector"
+                    android:textSize="@dimen/big_m" />
+
+                <EditText
+                    android:id="@+id/auto_pursue_yle_input"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/jc_time_bg"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:text="10"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/auto_pursue_default_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:button="@drawable/check_box_selector"
+                    android:checked="true"
+                    android:paddingLeft="25dip"
+                    android:text="默认以上条件生成方案"
+                    android:textColor="@drawable/tcolor_gray_to_black_selector"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="注：以最低奖金为计算标准"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/big_m" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/auto_pursue_setting_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+            android:text="生成方案"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bigger_s" />
+    </LinearLayout>
+
+</ScrollView>

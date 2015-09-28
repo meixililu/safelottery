@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@color/index_page_bg"
+    >
+	<LinearLayout
+	    android:id="@+id/help_detail_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="@dimen/top_banner"
+	    android:paddingTop="@dimen/top_padding_top"
+	    android:paddingBottom="@dimen/top_padding_bottom"
+	    android:background="@drawable/top_bg"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal"
+		>
+		
+<!-- 		<TextView -->
+<!-- 			android:layout_width="wrap_content" -->
+<!-- 	    	android:layout_height="fill_parent" -->
+<!-- 			android:textColor="@color/white" -->
+<!-- 			android:layout_marginLeft="@dimen/top_margin" -->
+<!-- 			android:textSize="@dimen/title" -->
+<!-- 			android:gravity="center" -->
+<!-- 			android:text="代购帮助" -->
+<!-- 			/> -->
+		
+<!-- 		<Button -->
+<!--             android:id="@+id/help_detail_button" -->
+<!--             android:layout_width="60dp" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_marginRight="@dimen/top_margin" -->
+<!--             android:background="@drawable/bg_btn_none_to_red_selector" -->
+<!--             android:gravity="center" -->
+<!--             android:text="去购彩" -->
+<!--             android:textColor="@drawable/top_btn_txt_color_selector" -->
+<!--             android:textSize="@dimen/big_m" /> -->
+	</LinearLayout>
+	
+	 <WebView 
+	    android:id="@+id/ssq_webview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	/>
+	
+</LinearLayout>

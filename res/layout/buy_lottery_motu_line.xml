@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/index_page_motu_worldcup_bg_repeat"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/index_page_motu_item"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:foreground="@drawable/framelayout_foreground_cover_selector" >
+        <ImageView 
+            android:layout_width="127dp"
+            android:layout_height="52dp"
+            android:src="@drawable/motu_logo_btn"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            />
+    </FrameLayout>
+
+    <View 
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_color_index"
+        />
+    <View 
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        />
+    <FrameLayout
+        android:id="@+id/index_page_worldcup_item"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:foreground="@drawable/framelayout_foreground_cover_selector" >
+        <ImageView 
+            android:layout_width="127dp"
+            android:layout_height="52dp"
+            android:src="@drawable/worldwup_logo_btn"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            />
+    </FrameLayout>
+
+</LinearLayout>

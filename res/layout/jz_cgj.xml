@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jc_base_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/jc_base_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="猜冠军"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jc_base_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/money_count_bg_xml"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/jc_base_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/gray_to_black_none_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_17"
+            android:paddingRight="@dimen/margin_17"
+            android:text="清空"
+            android:onClick="bottom_clear"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black_transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingTop="@dimen/margin_5" >
+
+            <TextView
+                android:id="@+id/jc_base_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="已选0场"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_m" />
+
+            <TextView
+                android:id="@+id/jc_base_at_least_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="请至少选择1场比赛"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_m" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/jc_base_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/red_to_red_none_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_17"
+            android:paddingRight="@dimen/margin_17"
+            android:text="确定"
+            android:onClick="bottom_submit"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jc_base_content_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/jc_base_bottom"
+        android:layout_below="@id/jc_base_title_bar"
+        android:orientation="vertical" >
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+                android:id="@+id/lv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@color/none"
+                android:divider="@drawable/line_gray_white"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:scrollbars="none"
+                android:smoothScrollbar="true" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_m"
+                style="@style/Widget.Sherlock.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/connection_faile_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/worldcup_dialog_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/worldcup_dialog_banner_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/worldcup_dialog_title_img"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/worldcup_dialog_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp" />
+
+        <CheckBox
+            android:id="@+id/worldcup_dialog_voice_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/worldcupdialog_voice_on_off_selector"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:button="@null"
+            android:drawablePadding="0dp" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/worldcup_dialog_wb"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingBottom="25dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/worldcup_dialog_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/worldcup_dialog_icon_selector" >
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/worldcup_dialog_icon_custom" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="定制"
+                android:textColor="@color/worldcup_dialog_textcolor_custom"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="赛事闹铃"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/worldcup_dialog_cgj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/worldcup_dialog_icon_selector" >
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/worldcup_dialog_icon_cgj" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="竞猜"
+                android:textColor="@color/worldcup_dialog_textcolor_cgj"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="谁是冠军"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/worldcup_dialog_jzbet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/worldcup_dialog_icon_selector" >
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/worldcup_dialog_icon_jcbet" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="投注"
+                android:textColor="@color/worldcup_dialog_textcolor_jzbet"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="竞彩足球"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/worldcup_dialog_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/worldcup_dialog_icon_selector" >
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/worldcup_dialog_icon_by" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="抢购"
+                android:textColor="@color/worldcup_dialog_textcolor_bybz"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="八元保中"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/cz_14_choice_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <include layout="@layout/choice_title_bar_tradition"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/jc_show_combine"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cz_14_choice_title_bar"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/jc_show_bet"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cz_14_choice_title_bar"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/cz_14_choice_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_grey"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/cz_14_choice_clear"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bg_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shuangseqiu_delete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清空"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cz_14_choice_random"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_center_bg_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shuangseqiu_random" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="玩法"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cz_14_choice_select"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bg_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shuangseqiu_queren" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cz_14_choice_sum_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_above="@+id/cz_14_choice_bottom"
+            android:background="@drawable/money_count_bg_xml"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/cz_14_choice_bet_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共0注,"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_s" />
+
+            <TextView
+                android:id="@+id/cz_14_choice_money_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共0元"
+                android:textColor="@color/content_txt_red_C"
+                android:textSize="@dimen/big_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/cz_14_choice_sum_layout"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/cz_14_choice_menu_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="@dimen/content_padding_top"
+                android:paddingRight="@dimen/content_padding_bottom" >
+
+                <TextView
+                    android:id="@+id/qsxz_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bet_record"
+                    android:gravity="center"
+                    android:text="期数选择"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middle_l" />
+
+                <Spinner
+                    android:id="@+id/cz_14_choice_issue_spinner"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/qsxz_name"
+                    android:layout_toRightOf="@id/qsxz_name"
+                    android:background="@drawable/bet_record_select"
+                    android:gravity="center"
+                    android:prompt="@string/cz_sfc_spinner_prompt_type" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/jc_time_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="停售时间"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middle_l" />
+
+                    <TextView
+                        android:id="@+id/cz_14_choice_issue_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00-00 00:00"
+                        android:textColor="@color/text_blue"
+                        android:textSize="@dimen/middle_l" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/cz_14_choice_split"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/line" />
+
+            <LinearLayout
+                android:id="@+id/cz_14_choice_declare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/cz_14_choice_select_numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="已选0场"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cz_14_choice_declare1"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ListView
+                    android:id="@+id/cz_14_choice_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/none"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/none"
+                    android:listSelector="@android:color/transparent"
+                     />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" >
+
+                    <ProgressBar
+                        android:id="@+id/cz_14_choice_progressbar"
+                        style="@style/Widget.Sherlock.Light.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/cz_14_choice_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="获取数据失败，点击刷新！"
+                        android:textSize="@dimen/big_l"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

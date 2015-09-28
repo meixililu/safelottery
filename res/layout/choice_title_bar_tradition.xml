@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/top_banner"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/choice_title_xuanhao"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_btn_none_to_red_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"
+                android:text="选号投注"
+                android:textColor="@drawable/top_btn_txt_color_selector"
+                android:textSize="15dip" />
+
+            <RadioButton
+                android:id="@+id/choice_title_hemai"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_btn_none_to_red_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"
+                android:text="参与合买"
+                android:textColor="@drawable/top_btn_txt_color_selector"
+                android:textSize="15dip" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/choice_title_button_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_10"
+        android:foreground="@drawable/bg_btn_none_to_red_selector"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="@dimen/title_icon_size"
+            android:layout_height="@dimen/title_icon_size"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/shuangseqiu_title_button" />
+    </FrameLayout>
+
+</RelativeLayout>

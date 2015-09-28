@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="3dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/league_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="1dip"
+                android:text="甲级联赛"
+                android:textColor="@color/jc_liansai_color"
+                android:textSize="@dimen/big_s" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000 00:00"
+                android:textColor="@color/jc_liansai_color"
+                android:textSize="@dimen/middle_s" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/item_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dip"
+            android:layout_weight="7"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/item_splayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/item_mian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="曼联 "
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/big_s" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="VS"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/item_guest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="阿桑纳"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@color/line_color"
+                android:orientation="horizontal"
+                android:padding="1dp" >
+
+                <CheckBox
+                    android:id="@+id/item_selected"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/check_back_white_to_red_select"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/margin_9"
+                    android:paddingTop="@dimen/margin_9"
+                    android:text="请点击选择投注选项"
+                    android:textColor="@drawable/check_color_black_to_white_select"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_average_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_3"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/item_as"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/item_ap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/item_af"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+</LinearLayout>

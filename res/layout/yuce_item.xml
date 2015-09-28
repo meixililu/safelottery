@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+    
+	<TextView
+		android:id="@+id/no_text"
+	    android:layout_width="70dip"
+	    android:layout_height="37dip"
+	    android:textColor="@color/text_black"
+	    android:textSize="@dimen/middle_l"
+	    android:gravity="center"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="1dip"
+	    android:text="1"
+	    android:layout_weight="1"
+		/>
+	
+	<TextView
+		android:id="@+id/team_text"
+	    android:layout_width="70dip"
+	    android:layout_height="37dip"
+	    android:textColor="@color/text_black"
+	    android:textSize="@dimen/middle_l"
+	    android:text="中国"
+	    android:gravity="center"
+	    android:paddingBottom="4dp"
+	    android:layout_weight="1"
+		/>
+	
+	<TextView
+	    android:id="@+id/touzhu_text"
+	    android:layout_width="70dip"
+	    android:layout_height="37dip"
+	    android:paddingBottom="4dp"
+	    android:textColor="@color/text_black"
+	    android:textSize="@dimen/middle_l"
+	    android:text="胜负"
+	    android:gravity="center"
+	    android:layout_weight="1"
+	    />
+
+	<TextView
+	    android:id="@+id/dan_text"
+	    android:layout_width="70dip"
+	    android:layout_height="37dip"
+	    android:layout_weight="1"
+	    android:focusable="false"
+	    android:text="胜负"
+	    android:button="@drawable/bg_rbtn_default_selected_disable_selector"
+	    android:textColor="@color/text_black"
+	    android:gravity="center"
+	    />
+	
+</LinearLayout>

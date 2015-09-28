@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <include layout="@layout/stock_choice_rock" />
+
+    <ImageView
+        android:id="@+id/qlc_choice_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_line" />
+
+    <TextView
+        android:id="@+id/qxc_choice_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="5dip"
+        android:gravity="center_vertical"
+        android:text="每位至少选择1个号码投注，所选号码与开奖号码全部相同且顺序一致，即中奖10万元。"
+        android:textColor="@color/text_black"
+        android:textScaleX="0.9"
+        android:textSize="@dimen/middle_m" />
+
+    <LinearLayout
+        android:id="@+id/qxc_choice_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

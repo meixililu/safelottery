@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/buy_lottery_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="方案详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title"
+            android:visibility="gone" />
+
+        <!-- <FrameLayout -->
+        <!-- android:id="@+id/fenxiang_button" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="fill_parent" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:foreground="@drawable/bg_btn_none_to_red_selector" -->
+        <!-- android:paddingLeft="@dimen/margin_20" -->
+        <!-- android:paddingRight="@dimen/margin_10" > -->
+
+
+        <!-- <ImageView -->
+        <!-- android:layout_width="@dimen/title_icon_size" -->
+        <!-- android:layout_height="@dimen/title_icon_size" -->
+        <!-- android:layout_gravity="center" -->
+        <!-- android:scaleType="fitCenter" -->
+        <!-- android:src="@drawable/btn_share_bg_d" /> -->
+        <!-- </FrameLayout> -->
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/buy_lottery_agent_progressbar_big"
+                style="@style/Widget.Sherlock.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/buy_lottery_agent_error_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="获取数据失败，点击刷新"
+                android:textSize="@dimen/big_m"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/buy_lottery_agent_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/buy_lottery_agent_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_transparent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <Button
+                    android:id="@+id/buy_again_button"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:gravity="center"
+                    android:text="再买一遍"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/buy_lottery_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/top_btn_txt_padding"
+                    android:paddingRight="@dimen/top_btn_txt_padding"
+                    android:text="去购彩"
+                    android:textColor="@drawable/top_btn_txt_color_selector"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <com.zch.safelottery.pulltorefresh.PullToRefreshScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/buy_lottery_agent_bottom"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android:id="@+id/scrollview_child"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/content_padding_top"
+                    android:paddingRight="@dimen/content_padding_bottom" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_360"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/content_padding_tb"
+                        android:paddingLeft="@dimen/content_padding_lr"
+                        android:paddingRight="@dimen/content_padding_lr"
+                        android:paddingTop="@dimen/content_padding_tb" >
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_hide1_lin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="发起人："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_initiator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textScaleX="0.9"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/buy_lottery_hide1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:button="@drawable/bg_btn_up_to_down_selector"
+                                    android:checked="false"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:scaleType="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_expand_send"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_person_send_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_sendto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textScaleX="0.9"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_expand_one"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="中奖金额："
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_reward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="中奖次数："
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_prize_times"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- second expand -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_360"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/content_padding_tb"
+                        android:paddingLeft="@dimen/content_padding_lr"
+                        android:paddingRight="@dimen/content_padding_lr"
+                        android:paddingTop="@dimen/content_padding_tb" >
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_hide2_lin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="方案金额："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_scheme_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="玩法："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_play_mothed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <LinearLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/buy_lottery_hide2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:button="@drawable/bg_btn_up_to_down_selector"
+                                        android:checked="false"
+                                        android:clickable="false"
+                                        android:focusable="false"
+                                        android:scaleType="center" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_expand_two"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="注数："
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="倍数："
+                                            android:textColor="@color/content_txt_6"
+                                            android:textSize="@dimen/middle_l" />
+
+                                        <TextView
+                                            android:id="@+id/buy_lottery_multiple"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/content_txt_6"
+                                            android:textSize="@dimen/middle_l" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="购买方式："
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_buy_mothed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/buy_lottery_winning_stop_lay"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone" >
+
+                                <ImageView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:src="@drawable/dotted_line" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="中奖停追："
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_winning_stop"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_6"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="方案编号："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_scheme_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="下注时间："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_bet_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- second expand -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_360"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/content_padding_tb"
+                        android:paddingLeft="@dimen/content_padding_lr"
+                        android:paddingRight="@dimen/content_padding_lr"
+                        android:paddingTop="@dimen/content_padding_tb" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_scheme_state_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="方案状态："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_scheme_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/buy_lottery_count_down"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/buy_lottery_result_linear"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_result_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="中奖情况："
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/content_txt_red"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_expand_three"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/buy_lottery_expand_rewords_top_line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/dotted_line" />
+
+                            <LinearLayout
+                                android:id="@+id/buy_lottery_expand_rewords"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="总奖金（税后）："
+                                        android:textColor="@color/buy_lottery_count_down"
+                                        android:textSize="@dimen/middle_l" />
+
+                                    <TextView
+                                        android:id="@+id/buy_lottery_reward_at_sum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/content_txt_red"
+                                        android:textSize="@dimen/middle_l" />
+                                </LinearLayout>
+                                <!-- <LinearLayout -->
+                                <!-- android:orientation="horizontal" -->
+                                <!-- android:layout_width="fill_parent" -->
+                                <!-- android:layout_height="wrap_content" -->
+                                <!-- android:layout_marginBottom="5dp" -->
+                                <!-- > -->
+                                <!-- <TextView -->
+                                <!-- android:layout_width="fill_parent" -->
+                                <!-- android:layout_height="wrap_content" -->
+                                <!-- android:textColor="@color/buy_lottery_count_down" -->
+                                <!-- android:textSize="@dimen/middle" -->
+                                <!-- android:text="包含一等奖1注，123000元；二等奖1注，56元" -->
+                                <!-- /> -->
+                                <!-- </LinearLayout> -->
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fanganneirong_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/user_home_account_detail_old"
+                        android:orientation="vertical"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="9dp"
+                        android:paddingRight="9dp"
+                        android:paddingTop="@dimen/content_padding_tb" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_content_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:text="方案内容"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+
+                                <TextView
+                                    android:id="@+id/buy_lottery_scheme_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:textColor="@color/content_txt_6"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/buy_lottery_see_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:text="查看全部"
+                                android:textColor="@color/buy_lottery_count_down"
+                                android:textSize="@dimen/middle_l" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_agent_scheme_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_agent_scheme_14or9"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:id="@+id/buy_lottery_agent_scheme_14or9_title"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="场次"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/big_m" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:gravity="center"
+                                    android:text="对阵"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/big_m" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="彩果"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/big_m" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="投注"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/big_m" />
+
+                                <TextView
+                                    android:id="@+id/danma_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="胆码"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/big_m" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/cz_14or9_viewpage_list"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="2dp" >
+
+                                <TextView
+                                    android:id="@+id/chuanfa_tv"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="left"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/middle_l" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/result_linearlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/user_home_account_detail_old"
+                        android:orientation="vertical"
+                        android:paddingBottom="13dp"
+                        android:paddingLeft="9dp"
+                        android:paddingRight="9dp"
+                        android:paddingTop="@dimen/content_padding_tb" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp" >
+
+                            <TextView
+                                android:id="@+id/buy_lottery_current_period_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="4dp"
+                                android:text="当期开奖号码"
+                                android:textColor="@color/content_txt_6"
+                                android:textSize="@dimen/middle_l" />
+
+                            <TextView
+                                android:id="@+id/buy_lottery_result_num_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:text="查看全部"
+                                android:textColor="@color/buy_lottery_count_down"
+                                android:textSize="@dimen/middle_l"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buy_lottery_current_period_num_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/buy_lottery_current_period_no_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="即将开奖"
+                                android:textColor="@color/content_txt_6"
+                                android:textSize="@dimen/middle_l" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.zch.safelottery.pulltorefresh.PullToRefreshScrollView>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

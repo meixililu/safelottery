@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/auto_pursue_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+<!--         <TextView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:layout_marginLeft="@dimen/top_margin" -->
+<!--             android:gravity="center" -->
+<!--             android:textColor="@color/white" -->
+<!--             android:textSize="@dimen/title" /> -->
+
+<!--         <Button -->
+<!--             android:id="@+id/auto_pursue_set_btn" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_marginRight="@dimen/top_margin" -->
+<!--             android:background="@drawable/bg_btn_none_to_red_selector" -->
+<!--             android:gravity="center" -->
+<!--             android:paddingLeft="10dp" -->
+<!--             android:paddingRight="10dp" -->
+<!--             android:text="盈利追号设置" -->
+<!--             android:visibility="gone" -->
+<!--             android:textColor="@drawable/top_btn_txt_color_selector" -->
+<!--             android:textSize="@dimen/big_m" /> -->
+    </RelativeLayout>
+
+    
+    <LinearLayout
+        android:id="@+id/auto_pursue_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+
+</LinearLayout>

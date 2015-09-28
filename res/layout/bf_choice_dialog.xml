@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="fill_parent"
+	android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+	android:background="@drawable/select_dialog_bg">
+
+    <TextView 
+        android:id="@+id/money_not_allowed_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:text="曼联 vs 阿森纳"
+        android:textSize="@dimen/title"
+        android:paddingLeft="@dimen/margin_10"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:background="@drawable/top_bg"
+        />
+    
+        <GridView 
+	        android:id="@+id/bf_choice_grid"
+	        android:layout_below="@+id/money_not_allowed_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="295dip"
+	        android:layout_margin="5dp"
+	        android:numColumns="auto_fit"
+		    android:verticalSpacing="5dip"  
+		    android:horizontalSpacing="5dip"  
+		    android:columnWidth="50dip"
+		    android:stretchMode="columnWidth"
+		    android:cacheColorHint="#00000000"
+		    android:scrollbars="none"
+		    android:listSelector="@android:color/transparent"
+	        />
+  
+        <LinearLayout 
+            android:id="@+id/money_not_allowed_bottom"
+            android:layout_below="@+id/bf_choice_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_marginTop="2dip"
+            android:background="@color/bottom_button_bg"
+            >
+            
+        <Button 
+		    android:id="@+id/money_not_allowed_btn_cancel"
+		    android:layout_weight="1"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="9dip"
+			android:layout_marginRight="9dip"
+			android:layout_marginTop="10dip"
+			android:textSize="@dimen/big_s"
+			android:text="取消"
+			android:textColor="@drawable/tcolor_black_to_gray_selector"
+			android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+			/>
+		  
+		<Button 
+		    android:id="@+id/money_not_allowed_btn_sure"
+		    android:layout_weight="1"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dip"
+			android:layout_marginLeft="9dip"
+			android:layout_marginRight="9dip"
+			android:textSize="@dimen/big_s"
+			android:text="确定"
+			android:textColor="@drawable/tcolor_black_to_gray_selector"
+			android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+			/>
+		
+        </LinearLayout>
+    
+</RelativeLayout>

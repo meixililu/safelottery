@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+	    android:id="@+id/tabBackground"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+		>
+		
+		<FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/main_page_tese"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/none_70"
+                android:orientation="vertical" 
+                android:visibility="invisible"
+                >
+                <View 
+                    android:id="@+id/main_page_item_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+                <FrameLayout 
+                    android:id="@+id/main_page_item_bayuan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector"
+                    android:gravity="center_vertical"
+                    >
+                     <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center"
+	                    android:orientation="horizontal" >
+	                    <ImageView 
+	                        android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginRight="15dp"
+		                    android:src="@drawable/icon_tese_bayuan"
+	                        />
+		                <TextView 
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="fill_parent"
+		                    android:gravity="center"
+		                    android:text="8元保中"
+		                    android:textColor="@color/white_thin"
+		                    android:textSize="@dimen/h4"
+		                    />
+	                </LinearLayout>
+	                <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/line_color" />
+                </FrameLayout>
+                
+                <FrameLayout 
+                    android:id="@+id/main_page_item_motu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector"
+                    android:gravity="center_vertical"
+                    >
+                     <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center"
+	                    android:orientation="horizontal" >
+	                    <ImageView 
+	                        android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginRight="15dp"
+		                    android:src="@drawable/icon_tese_muto"
+	                        />
+		                <TextView 
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="fill_parent"
+		                    android:gravity="center"
+		                    android:text="魔图选号"
+		                    android:textColor="@color/white_thin"
+		                    android:textSize="@dimen/h4"
+		                    />
+	                </LinearLayout>
+	                <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/line_color" />
+                </FrameLayout>
+                
+                <FrameLayout 
+                    android:id="@+id/main_page_item_alarm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector"
+                    android:gravity="center_vertical"
+                    >
+                     <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center"
+	                    android:orientation="horizontal" >
+	                    <ImageView 
+	                        android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginRight="15dp"
+		                    android:src="@drawable/icon_tese_alarm"
+	                        />
+		                <TextView 
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="fill_parent"
+		                    android:gravity="center"
+		                    android:text="赛事闹铃"
+		                    android:textColor="@color/white_thin"
+		                    android:textSize="@dimen/h4"
+		                    />
+	                </LinearLayout>
+                </FrameLayout>
+                <View 
+                    android:id="@+id/main_page_item_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+		
+        <TabWidget
+	      android:id="@android:id/tabs"
+	      android:layout_width="fill_parent"
+	      android:layout_height="55dp"
+  	      android:background="@drawable/tab_nav_bg"
+  	      />
+        
+    </LinearLayout>
+</TabHost>

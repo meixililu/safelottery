@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_dialog_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/buy_lottery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="分享到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <!-- 第一行分享 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 朋友圈 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/btn_share_friend_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/motu_share_friend_circle" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="朋友圈"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/middle_m" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/btn_share_sina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/motu_share_sina" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="新浪微博"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/middle_m" />
+                </LinearLayout>
+
+                <!-- 微信好友 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/btn_share_weixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/motu_share_weixin" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="微信好友"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/middle_m" />
+                </LinearLayout>
+            </TableRow>
+
+            <!-- 第二行 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <!-- QQ空间 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/btn_share_qq_zone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/motu_share_qq_zone" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="QQ空间"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/middle_m" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/btn_share_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/bg_btn_none_to_gray_color_selector" >
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/motu_share_qq" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="QQ好友"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/middle_m" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

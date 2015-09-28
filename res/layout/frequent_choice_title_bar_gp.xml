@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/top_banner"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="7" >
+
+    <FrameLayout
+        android:id="@+id/choice_button_frequent_sort"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_banner"
+        android:layout_weight="5"
+        android:foreground="@drawable/bg_btn_none_to_red_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/choice_tv_frequent"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="11选5-前一"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bigger_s" />
+
+            <ImageView
+                android:layout_width="@dimen/title_icon_size"
+                android:layout_height="@dimen/title_icon_size"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:scaleType="fitCenter"
+                android:src="@drawable/y11_title_button" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2" >
+
+        <Button
+            android:id="@+id/choice_btn_frequet_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_btn_none_to_red_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:visibility="gone"
+            android:text="图表"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zch.safelottery"
+    android:versionCode="20109"
+    android:versionName="2.1.9" >
+
+    <!-- 特别注意：配置文件不能右键格式化，渠道号替换有固定格式！！！！！ -->
+    
+    <!-- Frontia框架的公共权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <!-- FrontiaPush 需要的权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 人人 -->
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+    <!-- <uses-permission android:name="android.permission.USE_CREDENTIALS" /> -->
+    <!-- <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" /> -->
+
+
+    <!-- 支付宝使用权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- 安全监控权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.ut.permission.DEVICE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+
+    <permission android:name="com.ut.permission.DEVICE_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="18"
+        tools:ignore="OldTargetApi" />
+
+    <application
+        android:name=".activity.SafeApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".activity.ZCHLoaddingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- channel nomber, dot not change  渠道号默认为官网 8001 -->
+        <meta-data android:value='8001' android:name='CHANNEL'/>
+        <!-- baidu channel -->
+        <!-- channel nomber, dot not change -->
+        <meta-data android:name='BaiduMobAd_CHANNEL' android:value='8001' />
+        <!-- baidu app key -->
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="6b3616e115" />
+        <!-- is enable error log,default false -->
+        <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" />
+        <!-- app send log pattern -->
+        <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START" />
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- log send only wifi,default false -->
+        <meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false" />
+        <!-- 是否获取基站位置信息 ,默认为true-->
+		<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true" />
+		<!-- 是否获取WIFI位置信息，默认为true -->
+		<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true" />
+        <!-- LoaddingActivity QLCChoiceActivity -->
+
+        <activity
+            android:name=".activity.ChargeYouhuimaList"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <activity
+            android:name=".activity.MainTabActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <activity
+            android:name=".activity.BuyLotteryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MotuActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MotuUploadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MotuNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MotuShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MotuToShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.BoundUserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.BoundUserPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeYouHuiMaExchangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RecordBetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RecordBetAgentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.BuyLotteryTogetherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RecordPursueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RecordPursueAgentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.SearchUserResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.LotteryResultHallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.LotteryResultHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.SSXWTempActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.LeShuaChargeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeBanFuTongActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeHuiFuiTianXiaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeUnionpayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.unionpay.uppay.PayActivityEx"
+            android:configChanges="keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle" />
+        <activity
+            android:name=".activity.PKSChoiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.PKSOrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.CZ14ChoiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.CZ14OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.CZRX9OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.CZRX9ChoiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".pull.NotificationDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.ChartsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.IssueDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.SendLotteryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".sendlottery.ContactListViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service android:name=".pull.PullService" >
+        </service>
+
+        <!-- broadcast -->
+        <receiver android:name="com.zch.safelottery.broadcast.SafelotteryBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.zch.safelottery.safelottery.broadcast" />
+                <action android:name="com.zch.safelottery.startservice" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.zch.safelottery.broadcast.BootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- lilu end -->
+
+        <activity
+            android:name=".ctshuzicai.CtOrderListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.QLCActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.QXCActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.P3Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.P5Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.D3Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.DLTActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.K3Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".ctshuzicai.K3XActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.RecordAccountChargeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.HelpDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.UserSettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.UserSettingsActivityPushLottery"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.CheckIDCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.QuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.BoundIDCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.TakeBankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ctshuzicai.SSQActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.AccountTakeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeAlipaySafeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FadeTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.AmendNicknameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ModifyPassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.NewPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.TakeAccountHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.SettingInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.AccountChargeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ChargeAccountHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ChargeChinaMoblieActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.UserHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- jc -->
+        <activity
+            android:name=".jingcai.JZActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JZCGJActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JZBetActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JCFinishActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JLActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JLBetActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.JCOrderListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".jingcai.WorldcupAlarmActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeLdysActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.ChargeLakalaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.WebViewTitleBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".combine.CombineDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".combine.CombineStartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".combine.CombineDeclarationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".combine.CombineToBuyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.CombineHallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- high frequency lottery -->
+        <activity
+            android:name=".ctshuzicai.SSCActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ctshuzicai.Y11x5Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ctshuzicai.N11x5Activity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.ChargeOfflineBankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargeOfflineBankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.RecordBetCombineAgentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargePhoneCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChargePhoneCallSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.AccountChargeMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.AutoPursueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<!-- 人人联合登录 -->
+        <activity
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!-- QQ联合登录 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100523152" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.ModifyJointPassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MessageCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ZouShiTuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.MessageCenterDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.MessageCenterDetails2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- sdk begin -->
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.MiniLaucherActivity"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/MspAppTheme" >
+            <intent-filter>
+                <action android:name="com.alipay.mobilepay.android" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.taobao.android.ski.NODERIVATION"
+                android:value="true" />
+        </activity>
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.TransContainer"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/MspAppTheme" >
+            <meta-data
+                android:name="com.taobao.android.ski.NODERIVATION"
+                android:value="true" />
+        </activity>
+        <!-- 极简收银台主界面 -->
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.MiniPayActivity"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/msp_app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MspAppTheme"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter android:priority="800" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.taobao.android.ski.NODERIVATION"
+                android:value="true" />
+        </activity>
+        <!-- 极简收银台链接查看界面 -->
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.MiniWebActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/MspAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.taobao.android.ski.NODERIVATION"
+                android:value="true" />
+        </activity>
+
+
+        <!-- 快捷支付服务 -->
+        <service android:name="com.alipay.android.app.MspService" />
+        <service
+            android:name="com.alipay.mobile.datatunnel.ext.AlipayDataTunnelService"
+            android:enabled="true"
+            android:label="AlipayDataTunnelService" >
+            <intent-filter>
+                <action android:name="com.alipay.mobile.datatunnel.ext.action.MAIN" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.alipay.mobile.datatunnel.ext.trigger.AlipayDataTunnelTrigger" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- UTDID -->
+        <receiver
+            android:name="com.ut.device.BQueryWhoHasOne"
+            android:exported="true"
+            android:permission="com.ut.permission.DEVICE_STATE" >
+            <intent-filter>
+                <action android:name="UT.QueryWhoHasOne" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.ut.device.BFoundIt"
+            android:exported="true"
+            android:permission="com.ut.permission.DEVICE_STATE" >
+            <intent-filter>
+                <action android:name="UT.FoundIT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- sdk end -->
+    </application>
+
+</manifest>

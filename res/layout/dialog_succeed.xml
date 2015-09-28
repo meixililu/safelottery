@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_dialog_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/buy_lottery_title_tx"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="订单已提交，请等待出票"
+        android:textColor="@color/white"
+        android:textSize="@dimen/bigger_l" />
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_issue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingTop="10dip"
+        android:text="双色球 11836期  50注"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="2dip" -->
+    <!-- android:src="@drawable/line" /> -->
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_pursue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/line"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="追号：6期"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_multiple"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/line"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="倍投：6倍"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_consume"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/line"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="消费：￥528"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_balance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/line"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="余额：￥52"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <TextView
+        android:id="@+id/buy_lottery_suc_remark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/line"
+        android:drawablePadding="10dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="备注"
+        android:textColor="@color/text_grey"
+        android:visibility="gone"
+        android:textSize="@dimen/bigger_s" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_marginTop="2dip"
+        android:background="@color/bottom_button_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buy_lottery_suc_share"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:text="返回首页"
+            android:textColor="@drawable/tcolor_black_to_gray_selector"
+            android:textSize="@dimen/big_s" />
+
+        <Button
+            android:id="@+id/buy_lottery_suc_continue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:text="继续购彩"
+            android:textColor="@drawable/tcolor_black_to_gray_selector"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+</LinearLayout>

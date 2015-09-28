@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ssq_title_choice_bg"
+    >
+    
+	<TextView
+		android:id="@+id/select_popwindow_text1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dip"
+	    android:textColor="@color/white"
+	    android:text="选号投注"
+	    android:textSize="@dimen/bigger_l"
+	    android:gravity="center"
+	    android:background="@drawable/bg_btn_none_to_black_selector"
+		/>
+		
+	<TextView
+		android:id="@+id/select_popwindow_text2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dip"
+	    android:textColor="@color/white"
+	    android:text="图表走势"
+	    android:textSize="@dimen/bigger_l"
+	    android:gravity="center"
+	    android:background="@drawable/bg_btn_none_to_black_selector"
+		/>		       
+	
+	<TextView
+		android:id="@+id/select_popwindow_text3"
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dip"
+	    android:textColor="@color/white"
+	    android:text="投注记录"
+	    android:textSize="@dimen/bigger_l"
+	    android:gravity="center"
+	    android:background="@drawable/bg_btn_none_to_black_selector"
+		/>	
+	
+	<TextView
+		android:id="@+id/select_popwindow_text4"
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dip"
+	    android:textColor="@color/white"
+	    android:text="开奖信息"
+	    android:textSize="@dimen/bigger_l"
+	    android:gravity="center"
+	    android:background="@drawable/bg_btn_none_to_black_selector"
+		/>		       
+			
+</LinearLayout>

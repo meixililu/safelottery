@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/send_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="送TA一注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/send_lottery_lny"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/send_top"
+        android:fillViewport="true"
+        android:paddingTop="@dimen/top_margin"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/content_padding_top"
+                android:paddingRight="@dimen/content_padding_bottom" >
+
+                <LinearLayout
+                    android:id="@+id/send_lottery_lny_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="彩种："
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:id="@+id/send_lottery_type"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/spinner_bg_type1_selector"
+                            android:text="请选择"
+                            android:gravity="center"
+                            android:textColor="@drawable/black_to_white_selector" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注数："
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:id="@+id/send_lottery_number"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/spinner_bg_type1_selector"
+                            android:text="1注"
+                            android:gravity="center"
+                            android:textColor="@drawable/black_to_white_selector" />
+
+                        <TextView
+                            android:id="@+id/send_lottery_number_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/bg_360"
+                            android:gravity="center"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/big_m"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/send_friend_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/choice_charge_bg"
+                        android:hint="请输入手机号码"
+                        android:inputType="phone"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_m" />
+
+                    <Button
+                        android:id="@+id/send_select_friend_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                        android:gravity="center"
+                        android:text="从通讯录中选择"
+                        android:textColor="@drawable/tcolor_black_to_gray_selector"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contact_list_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发件人："
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/middle_l" />
+
+                    <EditText
+                        android:id="@+id/send_friend_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/choice_charge_bg"
+                        android:hint="请输入您的名字"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/prompt_box_bg"
+                    android:gravity="left|center_vertical"
+                    android:text="友情提示：输入您的名字，以便您的朋友放心使用"
+                    android:textColor="@color/text_grey"
+                    android:textScaleX="0.9"
+                    android:textSize="@dimen/middle_m" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="祝福语："
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/send_word"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middle_l" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自编辑："
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/send_my_words"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/choice_charge_bg"
+                        android:gravity="top|left"
+                        android:maxLength="140"
+                        android:minLines="5"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middle_l" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/remain_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_vertical|right"
+                    android:text="0/140"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buy_lottery_scu_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/bottom_button_bg"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/send_submit_free"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="免费赠送"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_s"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/send_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="自费赠送"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

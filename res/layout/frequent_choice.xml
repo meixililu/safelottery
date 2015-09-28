@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frequent_choice_scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/frequent_choice_layout_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/syxw_countdown_bg"
+            android:paddingTop="1dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/syxw_issue_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/frequent_countdown_issue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="0dp"
+                    android:text="000000"
+                    android:textColor="#ff9900"
+                    android:textScaleX="0.9"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="期"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/frequent_countdown_time_m_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/syxw_time_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+
+                <TextView
+                    android:id="@+id/frequent_countdown_time_m_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/syxw_time_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/syxw_time_bg"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+
+                <TextView
+                    android:id="@+id/frequent_countdown_time_s_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/syxw_time_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+
+                <TextView
+                    android:id="@+id/frequent_countdown_time_s_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/syxw_time_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+                <TextView
+                    android:id="@+id/frequent_countdown_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="预售中"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="3dp"
+                    android:visibility="gone"
+                    android:textSize="@dimen/middle_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/frequent_countdown_last_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_syxw_newest_open_selector"
+                    android:gravity="center"
+                    android:scaleType="center" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_line" />
+
+        <LinearLayout
+            android:id="@+id/choice_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RadioGroup
+                android:id="@+id/nc_choice_qianhou_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/nc_choice_radio_front"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/bg_rbtn_default_selected_disable_selector"
+                    android:checked="true"
+                    android:text="前位"
+                    android:textColor="@color/text_black" />
+
+                <RadioButton
+                    android:id="@+id/nc_choice_radio_back"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/bg_rbtn_default_selected_disable_selector"
+                    android:text="后位"
+                    android:textColor="@color/text_black" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/content_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frequent_choice_layout_introduce"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/frequent_choice_introduce_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:gravity="center_vertical"
+                android:text="奖金：13元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frequent_choice_towed_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/frequent_choice_introduce_text1_towed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dip"
+                android:layout_marginTop="8dip"
+                android:gravity="center_vertical"
+                android:text="至少选中1个号码投注，命中开奖号码第1位即中奖！"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middle_m" />
+
+            <LinearLayout
+                android:id="@+id/frequent_choice_view_ball_towed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/frequent_choice_introduce_text1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="8dip"
+            android:gravity="center_vertical"
+            android:text="至少选中1个号码投注，命中开奖号码第1位即中奖！"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middle_m" />
+
+        <LinearLayout
+            android:id="@+id/frequent_choice_view_ball"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

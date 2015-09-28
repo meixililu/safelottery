@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bet_record_root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bet_record_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/oldoop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_7"
+        android:layout_marginRight="@dimen/margin_7"
+        android:layout_marginTop="5dp"
+        android:autoLink="web"
+        android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+        android:gravity="center"
+        android:text="@string/oldoop_text"
+        android:textColor="@color/text_dark_blue"
+        android:textSize="@dimen/middle_l" />
+
+    <LinearLayout
+	    android:id="@+id/bet_record_lny"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/bet_record_type_lny"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/content_padding_top"
+            android:paddingRight="@dimen/content_padding_bottom" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bet_record"
+                    android:gravity="center"
+                    android:text="彩种类型"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/bet_record_spinner_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bet_record_select"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@drawable/black_to_white_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/bet_record_method_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/bet_record"
+                    android:gravity="center"
+                    android:text="购买方式"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/bet_record_spinner_buy_method"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bet_record_select"
+                    android:gravity="center"
+                    android:textColor="@drawable/black_to_white_selector" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="5dp" >
+
+            <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+                android:id="@+id/bet_record_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@color/none"
+                android:divider="@color/none"
+                android:fadingEdge="none"
+                android:listSelector="@color/none"
+                android:fastScrollEnabled="false"
+		        android:footerDividersEnabled="false"
+		        android:headerDividersEnabled="false"
+		        android:smoothScrollbar="true"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center" >
+
+                <ProgressBar
+                    android:id="@+id/bet_record__progressbar"
+                    style="@style/Widget.Sherlock.Light.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/bet_record_load_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="您暂无此类记录!"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/connection_faile_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/connection_faile"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

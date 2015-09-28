@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="添加联系人"
+            android:textSize="@dimen/title"
+            android:textColor="@color/white" >
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/choice_charge_bg"
+            android:completionThreshold="1"
+            android:hint="收件人" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="2" >
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottom_bg_selector"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottom_bg_selector"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top1"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:text="对不起,未能查找到手机号!"
+        android:textColor="#FFFFFF"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@+id/top1"
+        android:cacheColorHint="#00000000"
+        android:drawSelectorOnTop="false"
+        android:persistentDrawingCache="animation|scrolling"
+		android:layoutAnimation="@anim/list_layout_controller"
+        android:nextFocusUp="@+id/edit" />
+
+</RelativeLayout>

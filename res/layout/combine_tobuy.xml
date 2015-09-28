@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/combine_tobuy_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/combine_tobuy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="合买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/combine_tobuy_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_view_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/combine_tobuy_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="共0元"
+            android:textColor="@color/combine_dark_orange"
+            android:textSize="@dimen/middle_l" />
+
+        <Button
+            android:id="@+id/combine_tobuy_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/combine_secrettype_bg_s"
+            android:padding="5dp"
+            android:text="    提交    "
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/combine_tobuy_bottom"
+        android:layout_below="@id/combine_tobuy_top"
+        android:background="@color/index_page_bg" >
+
+        <com.zch.safelottery.pulltorefresh.PullToRefreshScrollView
+            android:id="@+id/combine_tobuy_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="7dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/combine_tobuy_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </com.zch.safelottery.pulltorefresh.PullToRefreshScrollView>
+
+        <ImageView
+            android:id="@+id/connection_faile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/connection_faile"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/combine_tobuy_progressbar"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

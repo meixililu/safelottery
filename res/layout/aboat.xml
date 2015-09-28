@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/aboat_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/search_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="关于我们"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/aboat_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/aboat_title"
+        android:paddingLeft="@dimen/content_padding_top"
+        android:paddingRight="@dimen/content_padding_bottom"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="@dimen/top_margin"
+            android:paddingTop="@dimen/top_margin" >
+
+            <LinearLayout
+                android:id="@+id/aboat_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_list_item_bg"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/aboat_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dip"
+                        android:gravity="center_horizontal"
+                        android:text="中彩票Android版"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bigger_s" />
+
+                    <TextView
+                        android:id="@+id/aboat_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aboat_1"
+                        android:layout_marginTop="14dip"
+                        android:gravity="center_horizontal"
+                        android:text="©北京中彩汇网络科技有限公司"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/middle_l" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/more_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/small_icon_help" />
+
+                    <TextView
+                        android:id="@+id/aboat_version"
+                        android:layout_width="250dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="版本号：1.1.4"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/aboat_tell"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/icon_aboat_tell" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="客服电话：400-00-58511"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/more_modify"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="客服邮箱：kefu@zch168.net"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/aboat_internet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/internet" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="官方网站：www.zch168.com"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/aboat_wap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/small_icon_bound" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="wap网站：wap.zch168.com"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+                
+                  <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+                  
+                <LinearLayout
+                    android:id="@+id/aboat_blog"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_list_item_middle_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/blog" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="官方微博：请点击进入"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/line_xml" />
+
+                <LinearLayout
+                    android:id="@+id/aboat_qq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icon_aboat_tell" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dip"
+                            android:text="客服 QQ："
+                            android:textColor="@color/content_txt_6"
+                            android:textSize="@dimen/big_m" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_weight="1"
+                        android:text="@string/aboat_qq"
+                        android:textColor="@color/content_txt_6"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <!-- <ImageView android:layout_width="fill_parent" -->
+                <!-- android:layout_height="fill_parent" android:src="@drawable/line_xml" /> -->
+                <!-- <LinearLayout -->
+                <!-- android:id="@+id/aboat_qq" -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:paddingTop="10dip" -->
+                <!-- android:paddingBottom="10dip" -->
+                <!-- android:paddingLeft="5dip" -->
+                <!-- android:paddingRight="5dip" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:background="@drawable/more_list_item_middle_selector" -->
+                <!-- > -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="wrap_content" -->
+                <!-- android:textColor="@color/content_txt_6" -->
+                <!-- android:textSize="@dimen/big" -->
+                <!-- android:layout_marginLeft="2dip" -->
+                <!-- android:text="942200733  2523887143 " -->
+                <!-- android:layout_weight="1" -->
+                <!-- /> -->
+                <!-- </LinearLayout> -->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_info_layout_remind"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboat_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_360" >
+
+                <ImageView
+                    android:id="@+id/setting_info_remind_image"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="1dip"
+                    android:background="@drawable/remind" />
+
+                <TextView
+                    android:id="@+id/setting_info_remind_text"
+                    android:layout_width="30dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/setting_info_remind_image"
+                    android:gravity="center_vertical"
+                    android:text="声明"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/middle_m" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/setting_info_remind_image"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="3dp"
+                    android:text="中彩汇客户端在用户使用过程中不收取任何费用,产生的流量费由运营商收取,建议选择适当的流量套餐或WIFI网络,以减少上网费用。"
+                    android:textSize="@dimen/middle_s" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

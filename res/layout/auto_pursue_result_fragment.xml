@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/auto_pursue_setting_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bdrq_title"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="期次"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="倍数"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="当前投"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="累计投"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="盈利"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="盈利率"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/auto_pursue_setting_btm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/center"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="5dp"
+        >
+		<TextView
+		    android:id="@+id/auto_pursue_money_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="共0元"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/big_s" />
+		<TextView
+		    android:id="@+id/auto_pursue_issue_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/auto_pursue_money_sum"
+            android:gravity="center"
+            android:text="本期投注为0期"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/big_s" />
+        <Button
+            android:id="@+id/auto_pursue_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_margin"
+            android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="立即投注"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_s" />
+
+    </RelativeLayout>
+
+	<ScrollView
+	    android:id="@+id/auto_pursue_content_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+       	android:layout_marginRight="10dp"
+       	android:layout_marginBottom="10dp"
+        android:layout_below="@id/auto_pursue_setting_top"
+        android:layout_above="@id/auto_pursue_setting_btm"
+		android:background="@drawable/notice_content_bg"
+		android:scrollbars="none"
+        >
+            <LinearLayout
+			    android:id="@+id/auto_pursue_content_layout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+        		android:orientation="vertical" 
+		        >
+        
+        	</LinearLayout>
+	</ScrollView>
+
+    
+</RelativeLayout>

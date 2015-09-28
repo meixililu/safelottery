@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user_home_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/combine_startsales_lottery_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="合买设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <FrameLayout
+            android:id="@+id/combine_startsales_btn_title_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:foreground="@drawable/bg_btn_none_to_red_selector"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_10" >
+
+            <ImageView
+                android:layout_width="@dimen/title_icon_size"
+                android:layout_height="@dimen/title_icon_size"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/combine_title_btn_d" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/user_home_account_detail_old"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/y11x5_order_list_count"
+        android:layout_below="@+id/user_home_title_bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/user_home_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/combine_bg"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/combine_lotteryid_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="彩种："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/combine_issue_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="期次："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/combine_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/combine_allmoney_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="方案总金额："
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:id="@+id/combine_totalAmount_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/combine_allmoney_tx"
+                        android:layout_alignBottom="@+id/combine_allmoney_tx"
+                        android:layout_toRightOf="@+id/combine_allmoney_tx"
+                        android:text="0元"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/combine_sub_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="方案认购："
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/combine_buyAmount_etx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/combine_sub_tx"
+                        android:background="@drawable/combine_input_bg"
+                        android:hint="至少认购1元"
+                        android:inputType="number"
+                        android:textColor="@color/dullred"
+                        android:textSize="@dimen/big_m" >
+                    </EditText>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:text="方案保底："
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <EditText
+                            android:id="@+id/combine_floorsAmount_etx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/textView5"
+                            android:background="@drawable/combine_input_bg"
+                            android:hint="可以不保底  "
+                            android:inputType="number"
+                            android:textColor="@color/dullred"
+                            android:textSize="@dimen/big_m" >
+                        </EditText>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:text="保密类型："
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/combine_secrettype_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="1dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/combine_ticheng_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/combine_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/combine_ticheng_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="我要佣金，税后盈利部分的："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <LinearLayout
+                    android:id="@+id/combine_afterbonus_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/combine_declaration_etx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_360"
+                    android:hint="我出方案，你受益~"
+                    android:maxLength="201"
+                    android:textColor="@color/text_black"
+                    android:textColorHint="@color/text_grey"
+                    android:textSize="@dimen/big_m" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/y11x5_order_list_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/combine_startsales_submit"
+        android:background="@drawable/money_count_bg_xml"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/scheme_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="0dp"
+            android:text="方案内容完全公开,佣金10%,认购500元,保底200元,共1000元"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_m" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/combine_startsales_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg_selector"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="20dip"
+            android:layout_height="25dip"
+            android:src="@drawable/shuangseqiu_queren" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即发起"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+</RelativeLayout>

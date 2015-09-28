@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/y11x5_number_bg"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    android:baselineAligned="false"
+    >
+      <TextView
+          android:id="@+id/name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:gravity="left|center_vertical"
+          android:layout_marginLeft="10dp"
+          android:textColor="@color/text_black" 
+          android:textSize="@dimen/big_m"
+          android:layout_weight="2"
+          android:text="姓名姓名"
+          />
+	<TextView
+          android:id="@+id/phone"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:text="13810662212"
+          android:textColor="@color/text_black"  
+          android:textSize="@dimen/big_m"
+          android:layout_weight="3"
+          />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" 
+        android:gravity="right"
+        >
+        <Button
+            android:id="@+id/delete"
+			android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+			android:textColor="@drawable/tcolor_black_to_gray_selector"
+			android:layout_width="fill_parent"
+			android:layout_height="35dp"
+            android:text="删除" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

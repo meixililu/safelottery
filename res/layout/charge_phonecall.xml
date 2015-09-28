@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bound_idcard_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/take_bank_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="银联卡充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+        
+        <ProgressBar
+            android:id="@+id/bound_idcard_progressbar"
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/charge_phonecall_layout_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bound_idcard_title_bar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical"
+            android:paddingBottom="10dip" >
+
+            <LinearLayout
+                android:id="@+id/take_bank_remain_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_name"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="真实姓名"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_name_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/charge_phonecall_name_edx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:gravity="center_vertical"
+                    android:hint="填写真实姓名"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textColorHint="@color/text_tint"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/charge_phonecall_cardtype_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_cardtype"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="证件类型"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_cardtype_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/charge_phonecall_cardtype_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg_type1_selector"
+                    android:gravity="left|center_vertical"
+                    android:text="身份证"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/take_bank_remain_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_card"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="证件号码"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_card_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="身份证"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/charge_phonecall_card_edx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:gravity="center_vertical"
+                    android:hint="填写证件号码"
+                    android:imeOptions="actionNext"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textColorHint="@color/text_tint"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/take_bank_bankname"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="发卡银行"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_bankname_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/big_m"
+                    android:textColor="@color/text_black"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/charge_phonecall_bankname_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/take_bank_city_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="开户省份"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_bankprovince_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/big_m"
+                    android:textColor="@color/text_black"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/charge_phonecall_bankprovince_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/take_bank_city_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="开户城市"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_bankcity_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/big_m"
+                    android:textColor="@color/text_black"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/charge_phonecall_bankcity_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center" />
+            </LinearLayout>
+            
+             <LinearLayout
+                android:id="@+id/take_bank_remain_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_banknumber"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="银行卡号"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <TextView
+                    android:id="@+id/charge_phonecall_banknumber_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/charge_phonecall_banknumber_edx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:gravity="center_vertical"
+                    android:hint="填写银行卡号"
+                    android:numeric="integer"
+                    android:imeOptions="actionNext"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textColorHint="@color/text_tint"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+            
+              <LinearLayout
+                android:id="@+id/take_bank_remain_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_phonenumber"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="手机号码"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <EditText
+                    android:id="@+id/charge_phonecall_phonenumber_edx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:gravity="center_vertical"
+                    android:hint="请填写与银行卡绑定的手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textColorHint="@color/text_tint"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+            
+              <LinearLayout
+                android:id="@+id/take_bank_remain_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/charge_phonecall_money"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="充值金额"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/big_m" />
+
+                <EditText
+                    android:id="@+id/charge_phonecall_money_edx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/choice_charge_bg"
+                    android:gravity="center_vertical"
+                    android:text="100"
+                    android:numeric="integer"
+                    android:imeOptions="actionDone"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+             
+
+            <Button
+                android:id="@+id/charge_phonecall_finish_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                android:text="完成"
+                android:textColor="@drawable/tcolor_black_to_gray_selector"
+                android:textSize="@dimen/big_m" />
+
+            <LinearLayout
+                android:id="@+id/take_bank_modify"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:gravity="center_vertical"
+                    android:text="如需变更绑定信息，请致电24小时热线:400-00-58511"
+                    android:textSize="@dimen/middle_s" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/take_bank_remind_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_360"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:id="@+id/take_bank_remind_image"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:src="@drawable/remind" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/take_bank_remind_image"
+                    android:text="提醒"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/big_s" />
+
+                <TextView
+                    android:id="@+id/take_bank_remind_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_image"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="2dip"
+                    android:text="1.银行卡在线支付由中国银联提供，采用卡密分离的核心专利技术，彻底保障用户的支付交易安全。"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/take_bank_remind_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text1"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="2.提交后，您将收到银联02096585的来电，请按电话提示输入银行卡密码完成支付。"
+                    android:textSize="@dimen/middle_l" />
+
+                <TextView
+                    android:id="@+id/take_bank_remind_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text2"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="3.支持工商、建设、农行、邮政储蓄、招商、交通、光大、华夏、兴业、中信10家银行的借记卡[无需开通网银]。"
+                    android:textSize="@dimen/middle_l" />
+                
+                <TextView
+                    android:id="@+id/take_bank_remind_text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text3"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="4.每日2000元，每月20000元，大额充值需求请联系客服申请。"
+                    android:textSize="@dimen/middle_l" />
+                
+                      <TextView
+                    android:id="@+id/take_bank_remind_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text4"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="5.充值50元以下收取1元手续费，50以上（包含50元）免手续费，1元手续费由银联代扣。"
+                    android:textSize="@dimen/middle_l" />
+                      
+                               <TextView
+                    android:id="@+id/take_bank_remind_text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text5"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="6.如果需要修改银行卡信息,请联系客服400-00-58511，并配合银联完成验证工作。"
+                    android:textSize="@dimen/middle_l" />
+                               
+                                <TextView
+                    android:id="@+id/take_bank_remind_text7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_bank_remind_text6"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="7.充值成功后，该银行卡将会与您的账户绑定,并默认为此充值渠道和提款的唯一专用卡。"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/middle_l" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/charge_phonecall_tell"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/buy_lottery_cz_bg_selector"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="260dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="中彩汇充值中心客服电话   400-00-58511"
+                    android:textSize="@dimen/middle_m" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginRight="11dip"
+                    android:src="@drawable/expand" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

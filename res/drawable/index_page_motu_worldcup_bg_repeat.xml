@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitmap 
+    xmlns:android ="http://schemas.android.com/apk/res/android"
+    android:src ="@drawable/index_page_motu_worldcup_bg"
+    android:tileMode ="repeat" 
+    />

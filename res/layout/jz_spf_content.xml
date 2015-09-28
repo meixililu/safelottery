@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bdrq_list_title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bdrq_title"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="20dip"
+	    android:layout_height="37dip"
+        android:gravity="center"
+        android:text="场次"
+        android:textColor="@color/text_black"
+        android:layout_weight="0.5"
+        android:textSize="@dimen/big_m" />
+
+    <TextView
+        android:layout_width="100dip"
+	    android:layout_height="37dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="对阵"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/big_m" />
+
+    <TextView
+        android:layout_width="20dip"
+	    android:layout_height="37dip"
+        android:gravity="center"
+        android:text="投注"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/big_m" 
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="20dip"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0.3"
+        android:gravity="left"
+        android:text="定胆"
+        android:textColor="@color/text_black"
+        android:layout_marginRight="3dp"
+        android:textSize="@dimen/big_m" />
+
+</LinearLayout>

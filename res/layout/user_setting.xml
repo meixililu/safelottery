@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <RadioButton
+            android:id="@+id/user_setting_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pl3_top_btn_zx_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="选号设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_m" />
+
+        <RadioButton
+            android:id="@+id/user_setting_push"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pl3_top_btn_zl_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="推送设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_m" />
+    </RadioGroup>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/user_setting_screen_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+</LinearLayout>

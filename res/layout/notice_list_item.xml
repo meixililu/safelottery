@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="12dp" >
+
+    <LinearLayout
+        android:id="@+id/notice_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/combine_list_item_selector"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/message_img"
+            android:layout_width="fill_parent"
+            android:layout_height="85dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/title_tx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="标题"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bigger_s"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time_tx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="活动时间："
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/big_m" />
+
+        <TextView
+            android:id="@+id/content_tx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="内容"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/big_m" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Expired_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/expired"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/notice_mark_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/mark_new"
+        android:visibility="gone" />
+
+</FrameLayout>

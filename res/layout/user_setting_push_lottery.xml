@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.zch.safelottery"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/help_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/search_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="开奖号码推送设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_tx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_title"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="勾选您想收到的彩种消息推送类型"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/bigger_s" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/user_setting_push_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/title_tx"
+        android:background="#00000000"
+        android:cacheColorHint="@color/none"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:divider="@color/none"
+        />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="7dp"
+        android:paddingBottom="5dp"
+        android:background="@color/bottom_button_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/noselectall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:text=" 清空" />
+        
+        <Button
+            android:id="@+id/selectall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:layout_weight="1"
+            android:text="全选" />
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

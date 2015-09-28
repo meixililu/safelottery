@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/index_page_table_item_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/section_parent_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+	        android:id="@+id/worldcup_header_section"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="15dp"
+	        android:paddingTop="8dp"
+	        android:paddingBottom="8dp"
+	        android:gravity="center_vertical"
+	        android:maxLength="10"
+	        android:textColor="@color/text_dark"
+	        android:textSize="@dimen/bigger_l" />
+    </LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/select_dialog_bg" >
+
+    <TextView
+        android:id="@+id/buy_lottery_scu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:text="奖金预测"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title" />
+
+    <TextView
+        android:id="@+id/buy_lottery_scu_qihao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:text="比赛场次：6场"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/big_s" />
+
+    <ImageView
+        android:id="@+id/buy_lottery_scu_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/buy_lottery_scu_zhuihao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:text="过关方式："
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:id="@+id/yuce_dialog_fangshi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="单关,2串1,3串1,4串1"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/buy_lottery_scu_beitou"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="注数金额："
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:id="@+id/yuce_dialog_zhushu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:text="20注,2倍,共80元"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+     <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+     
+    <LinearLayout
+        android:id="@+id/bdrq_list_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/yuce_list_title"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="命中场次"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="中奖注数"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最小奖金"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最大奖金"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/bdrq_list"
+        android:layout_width="fill_parent"
+        android:layout_height="170dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/bd_order_content"
+        android:cacheColorHint="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/buy_lottery_scu_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical"
+        android:background="@color/bottom_button_bg" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="注：奖金预测仅供参考,最终奖金以实际开奖sp值计算得出的奖金为准。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+</LinearLayout>

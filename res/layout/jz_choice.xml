@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/jz_choice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="竞彩足球"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+	    <com.zch.safelottery.pulltorefresh.PullToRefreshScrollView
+	        android:id="@+id/scrollview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:scrollbars="none" >
+		    <LinearLayout
+		        android:id="@+id/jz_parent_layout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="vertical"
+		        >
+		
+		    </LinearLayout>
+		</com.zch.safelottery.pulltorefresh.PullToRefreshScrollView>
+        
+		<ProgressBar
+            android:id="@+id/loadding_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        
+    </FrameLayout>
+</LinearLayout>

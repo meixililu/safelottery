@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    >
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/y11x5_number_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/many_view_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/y11_gewei_img"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:text="第一位"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middle_s" />
+
+        <!-- <LinearLayout -->
+        <!-- android:id="@+id/many_view_item_layout" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginLeft="8dip" -->
+        <!-- android:layout_marginRight="8dip" -->
+        <!-- android:layout_marginTop="5dip" -->
+        <!-- /> -->
+
+        <com.zch.safelottery.custom_control.AutoWrapView
+            android:id="@+id/many_view_item_auto_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:orientation="horizontal" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="fill_parent" -->
+
+<!-- > -->
+
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_popwindow_text"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cb_dlg_select"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:singleLine="true"
+    android:button="@null"
+    android:textColor="@drawable/black_white_color_selector"
+    android:textSize="@dimen/middle_s" />
+<!-- </LinearLayout> -->

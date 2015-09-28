@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_dialog_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/top_padding_bottom"
+        android:paddingTop="@dimen/top_padding_top" >
+
+        <TextView
+            android:id="@+id/normal_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="参与列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bigger_s" />
+
+        <ProgressBar
+            android:id="@+id/dialog_list_show__progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:background="@color/bottom_button_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/dialog_list_show_text1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/issue_detail_brim_white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_3"
+                android:paddingTop="@dimen/margin_3"
+                android:text="用户名"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/big_m" />
+
+            <TextView
+                android:id="@+id/dialog_list_show_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:background="@drawable/issue_detail_brim_white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_3"
+                android:paddingTop="@dimen/margin_3"
+                android:text="认购时间"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/big_m" />
+
+            <TextView
+                android:id="@+id/dialog_list_show_text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/issue_detail_brim_white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_3"
+                android:paddingTop="@dimen/margin_3"
+                android:text="认购金额"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/big_m" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/dialog_list_show_list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/none"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/none"
+            android:listSelector="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/style_show_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:background="@color/bottom_button_bg"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/normal_dialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:text="取消"
+            android:textColor="@drawable/tcolor_black_to_gray_selector"
+            android:textSize="@dimen/big_s" />
+
+        <Button
+            android:id="@+id/normal_dialog_sure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:text="确定"
+            android:textColor="@drawable/tcolor_black_to_gray_selector"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+</LinearLayout>

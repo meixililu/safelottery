@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/combin_lottery_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/combin_lottery_search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/choice_charge_bg"
+            android:hint="搜索合买发起人"
+            android:singleLine="true"
+            android:text="威廉希尔"
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/big_l" />
+
+        <Button
+            android:id="@+id/combin_lottery_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_btn_login_selector"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=" 搜索 "
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/big_l" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2dp" >
+
+        <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+            android:id="@+id/combine_lottery_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/none"
+            android:divider="@color/none"
+            android:dividerHeight="6dip"
+            android:fadingEdge="none"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:layoutAnimation="@anim/list_layout_controller"
+            android:listSelector="@color/none"
+            android:persistentDrawingCache="animation|scrolling"
+            android:scrollbars="none" />
+
+        <ProgressBar
+            android:id="@+id/combine_lottery_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/connection_faile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/connection_faile"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/connection_faile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

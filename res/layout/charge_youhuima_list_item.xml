@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/youhuima_item_bg"
+        android:foreground="@drawable/btn_orange_choose_selector" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.76"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.37" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.38"
+                    android:background="@drawable/youhuima_score_bg"
+                    android:gravity="center"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="5"
+                    android:shadowDy="3"
+                    android:shadowRadius="20"
+                    android:text="10元!"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/huge"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.24"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.28" />
+
+                <TextView
+                    android:id="@+id/tv_expire"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.51"
+                    android:text="时间：2014.05.02-2014.07.29"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_m" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.21" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

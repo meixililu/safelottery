@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bound_idcard_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/take_bank_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:gravity="center"
+            android:text="网上银行提款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <Button
+            android:id="@+id/take_bank_button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:background="@drawable/bg_btn_none_to_red_selector"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+        
+         <ProgressBar
+            android:id="@+id/take_bank_progressbar_s"
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bound_idcard_title_bar" >
+
+        <ProgressBar
+            android:id="@+id/take_bank_progressbar_m"
+            style="@style/Widget.Sherlock.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" 
+            />
+        
+        <TextView 
+            android:id="@+id/take_bank_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/big_l"
+            android:text="获取数据失败，点击刷新！"
+            android:visibility="gone" 
+            />
+
+        <ScrollView
+            android:id="@+id/take_bank_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true" 
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <LinearLayout
+                    android:id="@+id/take_bank_remain_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/take_bank_remain_tv"
+                        android:layout_width="80dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center_vertical"
+                        android:text="可提金额"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:id="@+id/take_bank_remain"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:gravity="center_vertical"
+                        android:text="￥0.00"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/take_bank_line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_line" />
+
+                <LinearLayout
+                    android:id="@+id/take_bank_take_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="提款金额"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/take_bank_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:gravity="center_vertical"
+                        android:hint="填写提款金额"
+                        android:maxLength="8"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:textColor="@color/text_grey"
+                        android:textColorHint="@color/text_tint"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_bankname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="15dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="开户银行"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <Spinner
+                        android:id="@+id/take_bank_bankname_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-9dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/take_bank_name_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/big_m"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_city_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="15dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="30dip"
+                        android:text="开户地址"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <Spinner
+                        android:id="@+id/take_bank_city_province"
+                        android:layout_width="120dip"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="-9dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/take_bank_city_city"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/take_bank_adress_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="3dp"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/big_m"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_branch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="支行名称"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/take_bank_card_branch"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:gravity="center_vertical"
+                        android:hint="请输入开户支行"
+                        android:imeOptions="actionNext"
+                        android:maxLength="50"
+                        android:singleLine="true"
+                        android:textColor="@color/text_grey"
+                        android:textColorHint="@color/text_tint"
+                        android:textSize="@dimen/big_m" />
+
+                    <TextView
+                        android:id="@+id/take_bank_car_branch_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/big_m"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_banknumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="80dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="银行卡号"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_m" />
+
+                        <EditText
+                            android:id="@+id/take_bank_card_number"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/choice_charge_bg"
+                            android:gravity="center_vertical"
+                            android:hint="输入卡号"
+                            android:imeOptions="actionNext"
+                            android:maxLength="30"
+                            android:numeric="integer"
+                            android:singleLine="true"
+                            android:textColor="@color/text_grey"
+                            android:textColorHint="@color/text_tint"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:id="@+id/take_bank_cardnumber_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/big_m"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/take_bank_card_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:gravity="center_vertical"
+                        android:text="仅支持借记卡提款"
+                        android:textColor="@color/text_blue"
+                        android:textSize="@dimen/middle_l" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_banknumber_agin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="重复卡号"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/take_bank_renumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:gravity="center_vertical"
+                        android:hint="再输入一遍"
+                        android:imeOptions="actionNext"
+                        android:maxLength="30"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:textColor="@color/text_grey"
+                        android:textColorHint="@color/text_tint"
+                        android:textSize="@dimen/big_m" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/take_bank_finish"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+                    android:text="完成"
+                    android:textColor="@drawable/tcolor_black_to_gray_selector"
+                    android:textSize="@dimen/big_m" />
+
+                <LinearLayout
+                    android:id="@+id/take_bank_modify"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:gravity="center_vertical"
+                        android:text="如需变更绑定信息，请致电24小时热线:400-00-58511"
+                        android:textSize="@dimen/middle_s" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/take_bank_remind_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/bg_360"
+                    android:paddingBottom="10dip" >
+
+                    <ImageView
+                        android:id="@+id/take_bank_remind_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:src="@drawable/remind" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:layout_toRightOf="@+id/take_bank_remind_image"
+                        android:text="提醒"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/big_s" />
+
+                    <TextView
+                        android:id="@+id/take_bank_remind_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/take_bank_remind_image"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="2dip"
+                        android:text="1.提款银行卡的开户姓名须与用户在客户端填写的真实姓名一致，否则将造成提款无法到账。"
+                        android:textSize="@dimen/middle_l" />
+
+                    <TextView
+                        android:id="@+id/take_bank_remind_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/take_bank_remind_text1"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="10dip"
+                        android:text="2.提款到账时间为发起请求后的1-3个工作日内。"
+                        android:textSize="@dimen/middle_l" />
+
+                    <TextView
+                        android:id="@+id/take_bank_remind_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/take_bank_remind_text2"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="10dip"
+                        android:text="3.提款手续费：提款金额小于2万元，每笔2元；大于或等于2万元且小于5万元，每笔5元；大于或等于5万元，每笔10元。"
+                        android:textSize="@dimen/middle_l" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/take_bank_zch_tell"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/buy_lottery_cz_bg_selector"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="260dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="中彩汇充值中心客服电话   400-00-58511"
+                        android:textSize="@dimen/middle_m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginRight="11dip"
+                        android:src="@drawable/expand" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</RelativeLayout>

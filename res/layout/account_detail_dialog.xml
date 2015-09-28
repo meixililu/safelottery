@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_dialog_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/account_detail_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:text="账户明细"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title" />
+
+    <TextView
+        android:id="@+id/account_detail_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="交易时间："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <ImageView
+        android:id="@+id/account_detail_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/account_detail_amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="提款金额："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <ImageView
+        android:id="@+id/account_detail_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/account_detail_short"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="交易类型："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/account_detail_line3" -->
+    <!-- android:layout_below="@+id/account_detail_beitou" -->
+    <!-- android:layout_marginTop="2dip" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:src="@drawable/line" -->
+    <!-- /> -->
+    <!--  -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/account_detail_xiaofei" -->
+    <!-- android:layout_below="@+id/account_detail_line3" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginLeft="5dip" -->
+    <!-- android:paddingTop="10dip" -->
+    <!-- android:paddingBottom="10dip" -->
+    <!-- android:text="提款类型：充值卡" -->
+    <!-- android:textSize="@dimen/bigger_s" -->
+    <!-- android:textColor="@color/text_grey" -->
+    <!-- /> -->
+
+    <ImageView
+        android:id="@+id/account_detail_line4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/account_detail_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="状态："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <ImageView
+        android:id="@+id/account_detail_line5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/account_detail_order_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="订单号："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <ImageView
+        android:id="@+id/account_detail_line6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/account_detail_memo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="备注："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/bigger_s" />
+
+    <LinearLayout
+        android:id="@+id/account_detail_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_marginTop="2dip"
+        android:background="@color/bottom_button_bg" >
+
+        <Button
+            android:id="@+id/account_detail_close"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gray_to_darkgray_selector"
+            android:textColor="@drawable/tcolor_black_to_gray_selector"
+            android:text="关闭"
+            android:textSize="@dimen/big_s" />
+    </LinearLayout>
+
+</LinearLayout>

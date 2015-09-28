@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="7dp"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
+	android:background="@color/index_page_bg"
+    >
+    <LinearLayout 
+        android:id="@+id/lottery_result_item"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/buy_lottery_cz_bg_selector"
+	    >
+	    <ImageView 
+	        android:id="@+id/lottery_result_cz_icon"
+	        android:layout_width="@dimen/lottery_icon_width_samll"
+            android:layout_height="@dimen/lottery_icon_heigh_samll"
+	        android:layout_gravity="center_vertical"
+	        android:layout_margin="3dp"
+	        />
+	     <LinearLayout 
+	         android:orientation="vertical"
+	         android:gravity="center"
+	         android:layout_height="wrap_content"
+	         android:layout_width="0dp"
+	         android:layout_gravity="center_vertical"
+	         android:layout_marginLeft="2dp"
+	         android:layout_weight="1"
+	         >
+	         <RelativeLayout 
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_marginBottom="5dp"
+	             android:layout_marginRight="3dp"
+	         	 android:layout_marginLeft="3dp"
+	             >
+	             <TextView
+	        		android:id="@+id/lottery_result_cz_name"
+					android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+					android:textColor="@color/buy_lottery_content_title"
+					android:layout_alignParentLeft="true"
+					android:textSize="@dimen/big_m"
+					/>
+	             <TextView
+	        		android:id="@+id/lottery_result_cz_issue"
+					android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+					android:textColor="@color/buy_lottery_content_title"
+					android:layout_alignParentRight="true"
+					android:textSize="@dimen/big_m"
+					/>
+	         </RelativeLayout>
+	         <LinearLayout 
+	               android:id="@+id/lottery_result_linearlayout"
+	               android:orientation="horizontal"
+		           android:layout_width="fill_parent"
+		           android:layout_height="wrap_content"
+	               >
+	               
+	        </LinearLayout>
+	         
+	     </LinearLayout>
+	</LinearLayout>
+	
+    <TextView
+        android:id="@+id/lottery_result_cz_type"
+		android:layout_width="wrap_content"
+    	android:layout_height="7dp"
+		android:visibility="gone"
+		android:text=""
+		/>
+
+        
+</LinearLayout>

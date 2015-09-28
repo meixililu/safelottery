@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="35dip"
+    android:background="@drawable/money_count_bg_xml"
+    android:orientation="horizontal"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/order_list_page_beitou_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:layout_marginLeft="5dip"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/order_list_page_beitou_text"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/beitou"
+            android:gravity="center"
+            android:text="倍投"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/middle_s" />
+
+        <TextView
+            android:id="@+id/order_list_page_beitou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/beitou_select"
+            android:gravity="center"
+            android:text="1倍"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/middle_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_list_page_zhuihao_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/order_list_page_zhuihao_text"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/beitou"
+            android:gravity="center"
+            android:text="追号"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/middle_s" />
+
+        <TextView
+            android:id="@+id/order_list_page_zhuihao"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/beitou_select"
+            android:gravity="center"
+            android:text="0期"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/middle_s" />
+    </LinearLayout>
+
+	<Button 
+	    android:id="@+id/order_list_page_auto_pursue"
+	    android:layout_width="wrap_content"
+	    android:layout_height="30dp"
+	    android:textSize="@dimen/middle_m"
+	    android:text="  盈利追号  "
+	    android:background="@drawable/saixuan_selector"
+	    android:textColor="@drawable/tcolor_gray_to_black_selector"
+	    android:layout_marginRight="10dp"
+	    android:visibility="gone"
+	    />	
+</LinearLayout>

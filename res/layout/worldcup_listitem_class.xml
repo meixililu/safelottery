@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cover_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="12dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_hometeam_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="21dp"
+                        android:src="@drawable/test_baxi" />
+
+                    <TextView
+                        android:id="@+id/tv_hometeam_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="巴西"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/bigger_m" />
+
+                    <TextView
+                        android:id="@+id/tv_hometeam_vs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="VS"
+                        android:textColor="@color/green_light"
+                        android:textSize="@dimen/bigger_m" />
+
+                    <TextView
+                        android:id="@+id/tv_guestteam_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="克罗地亚"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/bigger_m" />
+
+                    <ImageView
+                        android:id="@+id/iv_guestteam_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="21dp"
+                        android:src="@drawable/test_baxi" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="投注截止：2014-06-13 03:49"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/middle_m" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cb_jz_cgj_selector"
+                android:button="@null"
+                android:drawablePadding="0dp"
+                android:enabled="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color_gray" />
+    </LinearLayout>
+
+</FrameLayout>

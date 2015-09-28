@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/alipay_charge_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/accountway"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="优惠码兑换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/alipay_charge_title_bar"
+        android:layout_marginBottom="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <LinearLayout
+                    android:id="@+id/alipay_charge_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="优惠码："
+                        android:textColor="@color/charge_youhuima_caption_text_color"
+                        android:textSize="@dimen/big_m" />
+
+                    <EditText
+                        android:id="@+id/et_youhuima"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:background="@null"
+                        android:hint="请填写优惠码"
+                        android:imeOptions="actionDone"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/charge_youhuima_text_color"
+                        android:textSize="@dimen/big_s" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/line" />
+
+                <FrameLayout
+                    android:id="@+id/alipay_charge_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_gravity="center_horizontal"
+                    android:foreground="@drawable/btn_orange_choose_selector" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_orange"
+                        android:paddingLeft="60dp"
+                        android:paddingRight="60dp"
+                        android:text="使用"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bigger_s" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_not_bind_mobile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您未绑定手机号码，请绑定后使用"
+                    android:textColor="@color/charge_youhuima_caption_text_color"
+                    android:textSize="@dimen/big_m" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1.个人中心--手机绑定"
+                    android:textColor="@color/charge_youhuima_text_color"
+                    android:textSize="@dimen/big_s" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2.验证登录密码--验证通过"
+                    android:textColor="@color/charge_youhuima_text_color"
+                    android:textSize="@dimen/big_s" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3.验证手机--绑定成功"
+                    android:textColor="@color/charge_youhuima_text_color"
+                    android:textSize="@dimen/big_s" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

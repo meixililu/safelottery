@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@color/index_page_bg"
+    >
+	<RelativeLayout
+		android:id="@+id/cz_14_orderlist_page_top"
+	    android:layout_width="fill_parent"
+	    android:layout_height="@dimen/top_banner"
+	    android:paddingTop="@dimen/top_padding_top"
+	    android:paddingBottom="@dimen/top_padding_bottom"
+	    android:background="@drawable/top_bg"
+	    android:gravity="center_vertical"
+		>
+		<TextView
+			android:layout_width="wrap_content"
+	    	android:layout_height="fill_parent"
+			android:textColor="@color/white"
+			android:layout_marginLeft="@dimen/top_margin"
+			android:textSize="@dimen/title"
+			android:gravity="center"
+			android:text="14场胜负彩投注列表"
+			/>
+	</RelativeLayout>
+	
+	<LinearLayout
+		android:id="@+id/cz_14_orderlist_page_bottom"
+		android:layout_width="fill_parent"
+		android:layout_height="45dip"
+		android:background="@color/text_grey"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_vertical"
+		>
+		
+		<LinearLayout
+			android:id="@+id/cz_14_orderlist_page_back"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:background="@drawable/bottom_bg_selector"
+			android:gravity="center"
+			android:layout_weight="1"
+			>
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/return_img"
+				/>
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="返回修改"
+				android:textSize="@dimen/big_s"
+				android:textColor="@color/white"
+				/>
+			
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/cz_14_orderlist_page_buy_together"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:background="@drawable/bottom_center_bg_selector"
+			android:gravity="center"
+			android:layout_weight="1"
+			>
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shuangseqiu_random"
+				/>
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="发起合买"
+				android:textSize="@dimen/big_s"
+				android:textColor="@color/white"
+				/>
+			
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/cz_14_orderlist_page_submit"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="@drawable/bottom_bg_selector"
+			android:gravity="center"
+			android:layout_weight="1"
+			>
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shuangseqiu_queren"
+				/>
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="立即投注"
+				android:textSize="@dimen/big_s"
+				android:textColor="@color/white"
+				/>
+			
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+	<RelativeLayout 
+		android:id="@+id/cz_14_orderlist_page_count_layout"
+	    android:layout_above="@id/cz_14_orderlist_page_bottom"
+	    android:layout_width="fill_parent"
+	    android:layout_height="35dip"
+	    android:background="@drawable/money_count_bg_xml"
+	    >
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="20dp"
+		    >
+		    <TextView
+				android:id="@+id/cz_14_orderlist_pag_bet_num"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20dp"
+		    	android:text="0注,"
+		    	android:textSize="@dimen/big_s"
+		    	android:textColor="@color/white"
+		    	/>
+		     <TextView
+				android:id="@+id/cz_14_orderlist_pag_money_sum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+		    	android:text="共0元"
+		    	android:textSize="@dimen/big_s"
+		    	android:textColor="#cc0000"
+		    	/>
+		</LinearLayout>
+		
+		<LinearLayout 
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="7dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            >
+            
+            <TextView 
+                android:id="@+id/cz_14_orderlist_pag_beitou_text"
+                android:layout_width="50dip"
+                android:layout_height="fill_parent"
+                android:text="倍投"
+                android:textColor="@color/text_black"
+                android:background="@drawable/beitou"
+                android:textSize="@dimen/middle_s"
+                android:gravity="center"
+                />
+            
+            <TextView 
+                android:id="@+id/cz_14_orderlist_pag_beitou_num"
+                android:layout_width="50dip"
+                android:layout_height="fill_parent"
+                android:text="1倍"
+                android:textColor="@color/text_black"
+                android:background="@drawable/beitou_select"
+                android:textSize="@dimen/middle_s"
+                android:gravity="center"
+                />
+            
+        </LinearLayout>
+	    
+	</RelativeLayout>
+	    
+	<RelativeLayout
+		android:id="@+id/cz_14_orderlist_pag_middle"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_above="@id/cz_14_orderlist_page_count_layout"
+		android:layout_below="@id/cz_14_orderlist_page_top"
+		android:padding="10dp"
+		android:orientation="vertical"
+		>
+		<LinearLayout
+		    android:id="@+id/cz_14_orderlist_bottom_top"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:padding="8dp"
+			android:background="@drawable/notice_title_bg"
+			>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_black"
+				android:textSize="@dimen/big_l"
+				android:gravity="center"
+				android:layout_weight="2"
+				android:text="场次"
+				/>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_black"
+				android:textSize="@dimen/big_l"
+				android:gravity="center"
+				android:layout_weight="1"
+				android:text="对阵"
+				/>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_black"
+				android:textSize="@dimen/big_l"
+				android:gravity="center"
+				android:layout_weight="2"
+				android:text="投注"
+				/>
+		</LinearLayout>
+		
+		<LinearLayout 
+		        android:id="@+id/cz_14_orderlist_bottom_bottom"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginTop="5dip"
+		        >
+	        <CheckBox 
+			    android:id="@+id/cz_14_orderlist_page_agreement"
+			    android:layout_height="25dip"
+			    android:layout_width="15dip"
+			    android:checked="true"
+			    android:clickable="false"
+			    android:button="@drawable/check_box_selector"
+			    />
+	        <TextView 
+	            android:id="@+id/cz_14_orderlist_page_agreement_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="2dip"
+	            android:text="我已同意并阅读"
+	            android:textSize="@dimen/big_s"
+	            android:textColor="@color/text_black"
+	            android:gravity="center_vertical"
+	            />
+	        <TextView 
+	            android:id="@+id/cz_14_orderlist_page_agreement_content"
+	            android:layout_width="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:text="《用户服务协议》"
+	            android:textSize="@dimen/big_s"
+	            android:textColor="@color/text_blue"
+	            android:gravity="center_vertical"
+	            />
+	            
+	    </LinearLayout>
+	    
+		<LinearLayout
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/cz_14_orderlist_bottom_top"
+			android:layout_above="@id/cz_14_orderlist_bottom_bottom"
+			android:padding="0dp"
+			android:background="@drawable/notice_content_bg"
+		    >
+		    <ListView
+				android:id="@+id/cz_14_orderlist_page_list"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:divider="@drawable/line"
+				android:cacheColorHint="#00000000"
+				android:background="@color/none"
+				android:listSelector="@android:color/transparent"
+	            android:persistentDrawingCache="animation|scrolling"
+			    android:layoutAnimation="@anim/list_layout_controller"
+				/>
+		</LinearLayout>
+	    
+	</RelativeLayout>
+	    
+	
+</RelativeLayout>

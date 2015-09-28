@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="huge">32sp</dimen>
+	<dimen name="h0">30sp</dimen>
+	<dimen name="h1">29sp</dimen>
+	<dimen name="h2">28sp</dimen>
+	<dimen name="h3">27sp</dimen>
+	<dimen name="h4">26sp</dimen>
+	<dimen name="h5">25sp</dimen>
+	<dimen name="h6">24sp</dimen>
+	<dimen name="bigest_l">23sp</dimen>
+	<dimen name="bigest_m">22sp</dimen>
+	<dimen name="bigest_s">21sp</dimen>
+	<dimen name="bigger_l">20sp</dimen>
+	<dimen name="bigger_m">19sp</dimen>
+	<dimen name="bigger_s">18sp</dimen>
+	<dimen name="big_l">17sp</dimen>
+	<dimen name="big_m">16sp</dimen>
+	<dimen name="big_s">15sp</dimen>
+	<dimen name="middle_l">14sp</dimen>
+	<dimen name="middle_m">13sp</dimen>
+	<dimen name="middle_s">12sp</dimen>
+	<dimen name="small_l">11sp</dimen>
+	<dimen name="small_m">10sp</dimen>
+	<dimen name="small_s">9sp</dimen>
+	
+	<dimen name="title">22sp</dimen>
+	<dimen name="top_banner">45dp</dimen>
+	
+	<dimen name="top_btn_txt_padding">11dp</dimen>
+	<dimen name="top_margin">7dp</dimen>
+	<dimen name="margin_2">2dp</dimen>
+	<dimen name="margin_3">3dp</dimen>
+	<dimen name="margin_5">5dp</dimen>
+	<dimen name="margin_7">7dp</dimen>
+	<dimen name="margin_8">8dp</dimen>
+	<dimen name="margin_9">9dp</dimen>
+	<dimen name="margin_10">10dp</dimen>
+	<dimen name="margin_15">15dp</dimen>
+	<dimen name="margin_17">17dp</dimen>
+	<dimen name="margin_20">20dp</dimen>
+	<dimen name="top_padding_top">0dp</dimen>
+	<dimen name="top_padding_bottom">0dp</dimen>
+	<dimen name="content_padding_top">7dp</dimen>
+	<dimen name="content_padding_bottom">7dp</dimen>
+	<dimen name="content_padding_left">6dp</dimen>
+	<dimen name="content_padding_right">6dp</dimen>
+	
+	<dimen name="jc_14_select_item_width">55dp</dimen>
+	<dimen name="jc_14_select_item_height">40dp</dimen>
+	
+	<dimen name="more_icon_width">25dp</dimen>
+	
+	<dimen name="title_icon_size">18dp</dimen>
+	
+	<!--  购彩页面内容padding	-->
+	<dimen name="content_padding_cn">10dp</dimen>
+	<dimen name="content_padding_lr">10dp</dimen>
+	<dimen name="content_padding_tb">10dp</dimen>
+
+	
+	<dimen name="round_side_width">3dp</dimen>
+	
+	<dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+	
+    <dimen name="lottery_icon_width_samll">55dp</dimen>
+    <dimen name="lottery_icon_heigh_samll">59dp</dimen>
+    
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<color name="none">#00000000</color>
+	<color name="none_thin">#33000000</color>
+	<color name="black_transparent">#aa000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_thin">#bbFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FFDE0000</color>
+    <color name="dullred">#bc4c4c</color>
+    <color name="orange">#FFEF6800</color>
+    <color name="green">#228B22</color>
+    <color name="green_light">#00a651</color>
+	<color name="blue">#ff0000ff</color>
+	<color name="gray">#FF888888</color>
+	<color name="orange_thin">#bbff3226</color>
+    <color name="lightgrey">#FFEBE7DB</color>
+    <color name="text_tint">#cccccc</color>
+    <color name="text_grey">#999999</color>
+	<color name="text_black">#666666</color>
+	<color name="text_black_light">#5e5e5e</color>
+	<color name="text_dark">#333333</color>
+	<color name="text_blue">#6992cc</color>
+	<color name="text_red">#de0000</color>
+	<color name="text_red_userinfo">#fe4f4f</color>
+	<color name="text_dark_yellow">#904c0f</color>
+	<color name="text_dark_green">#246423</color>
+	<color name="text_dark_blue">#255581</color>
+	<color name="bg_black">#303030</color>
+	<color name="bottom_button_bg">#ececec</color>
+	<color name="text_view_border">#D6D6D6</color>
+	<color name="index_page_bg">#f2f2f2</color>
+	<color name="index_page_bg_s">#99dbd3c6</color>
+	<color name="red_light">#b92402</color>
+	<color name="lightyellow_cover">#44a78d64</color>
+	
+	
+	<color name="line_color_index">#b1b1b1</color>
+	<color name="line_color">#e7d3d4d6</color>
+	<color name="line_color_gray">#e7e7e7</color>
+	<color name="more_list_cover">#55a78d64</color>
+	
+	<color name="round_progress_bar_bg_off">#FdFdFd</color>
+	<color name="bao">#87A900</color>
+	    
+	<color name="buy_lottery_content_title">#666666</color>
+	<color name="buy_lottery_count_down">#0756a0</color>
+	<color name="prompt_txt">#267524</color>
+	<color name="input_box_name">#9f9f9f</color>
+	<color name="content_txt_red_C">#cc0000</color>
+	<color name="content_txt_6">#666666</color>
+	<color name="content_txt_A">#AAAAAA</color>
+	<color name="content_txt_red">#bc4c4c</color>
+	
+	<color name="tab_text_color_d">#737373</color>
+	<color name="tab_text_color_s">#a32c26</color>
+	
+	<color name="progress_grey">#dfdfdf</color>
+	
+	<color name="progress_red_start">#f34a33</color>
+	
+	<color name="progress_green_start">#a5be3f</color>
+<!-- 	<color name="progress_green_end">#657f00</color> -->
+	
+	<color name="charts_yellow_bg_color">#6ab228</color>
+	<color name="combine_dark_orange">#fe4606</color>
+	<color name="combine_light_orange">#fe7509</color>
+	
+	<color name="round_table_side">#FFFFFFFF</color>
+	<color name="round_table_char">#f5fe60</color>
+	
+	<color name="gray_thin">#e3e3e3</color>
+	<color name="green_2ca403">#2ca403</color>
+	<color name="gray_777777">#777777</color>
+	<color name="none_70">#bb000000</color>
+	<color name="red_e54f46">#e54f46</color>
+	<color name="none_red_60">#aa612421</color>
+	
+	<color name="jc_liansai_color">#bb8c625b</color>
+	<color name="rangfen_color">#ffe3e1</color>
+	<color name="feirangfen_color">#dbf9ff</color>
+	<color name="orange_subtitle">#a34901</color>
+	
+	<color name="index_page_table_item_bg_color">#e5e5e5</color>
+	<color name="worldcup_dialog_textcolor_custom">#e9178d</color>
+	<color name="worldcup_dialog_textcolor_cgj">#ff8a00</color>
+	<color name="worldcup_dialog_textcolor_jzbet">#759a09</color>
+	<color name="worldcup_dialog_textcolor_bybz">#178cbd</color>
+	<color name="new_prompt_bg_color">#ff8e3b</color>
+	<color name="text_orange">#e8752f</color>
+	<color name="text_green">#46c71e</color>
+	
+	<color name="charge_youhuima_caption_text_color">#ff8e3b</color>
+	<color name="charge_youhuima_text_color">#5e5e5e</color>
+	
+</resources>

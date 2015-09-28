@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/k3_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#7f000000" >
+
+        <TextView
+            android:id="@+id/k3_choice_title_back"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/k3_title_back" />
+
+        <Button
+            android:id="@+id/k3_choice_play_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_k3_selector"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="图表"
+            android:textColor="@drawable/tcolor_white_to_black_selector"
+            android:textSize="@dimen/middle_m" />
+
+        <TextView
+            android:id="@+id/k3_choice_issue_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/k3_choice_title_back"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/middle_l" />
+
+        <TextView
+            android:id="@+id/k3_choice_issue_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/k3_choice_title_back"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/middle_l" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/k3_base_layout_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#7f000000"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/k3_choice_layout_dice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/k3_choice_dice_progressbar"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/k3_choice_btn_issue_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/k3_time_layout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/k3_choice_issue_history_0" />
+
+        <LinearLayout
+            android:id="@+id/k3_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/k3_choice_time_ms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/k3_choice_time_back"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/round_table_char"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:id="@+id/k3_choice_time_mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/k3_choice_time_back"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/round_table_char"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/round_table_char"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:id="@+id/k3_choice_time_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/k3_choice_time_back"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/round_table_char"
+                android:textSize="@dimen/big_l" />
+
+            <TextView
+                android:id="@+id/k3_choice_time_sg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/k3_choice_time_back"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/round_table_char"
+                android:textSize="@dimen/big_l" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/k3_bg"
+            android:orientation="vertical" >
+
+            <com.zch.safelottery.pulltorefresh.PullToRefreshListView
+                android:id="@+id/k3_choice_listview_issue_history"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@color/none"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:layoutAnimation="@anim/list_layout_controller"
+                android:minHeight="200dp"
+                android:persistentDrawingCache="animation|scrolling"
+                android:scrollbars="none" />
+
+            <ProgressBar
+                android:id="@+id/k3_choice_issue_history_progressbar"
+                style="@style/Widget.Sherlock.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/k3_choice_issue_prompt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="点击刷新"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/big_m"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/k3_choice_layout_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/k3_bg"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/k3_choice_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+
+                <ProgressBar
+                    android:id="@+id/k3_choice_content_progress"
+                    style="@style/Widget.Sherlock.Light.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/k3_choice_radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/k3_choice_bottom_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <Button
+            android:id="@+id/k3_choice_btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_k3_selector"
+            android:text="   清  空   "
+            android:textColor="@drawable/tcolor_white_to_black_selector"
+            android:textSize="@dimen/big_l" />
+
+        <TextView
+            android:id="@+id/k3_choice_tv_bet_meney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="共0注,0元"
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/big_m" />
+
+        <Button
+            android:id="@+id/k3_choice_btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_k3_selector"
+            android:text="   确  定   "
+            android:textColor="@drawable/tcolor_white_to_black_selector"
+            android:textSize="@dimen/big_l" />
+    </LinearLayout>
+
+</LinearLayout>

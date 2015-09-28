@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lottery_result_history_parentlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="@drawable/framelayout_foreground_cover_selector"
+    >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp" 
+    	android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/lottery_result_history_cz_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/buy_lottery_content_title"
+            android:textSize="@dimen/middle_l" 
+            />
+
+        <TextView
+            android:id="@+id/lottery_result_history_cz_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/buy_lottery_content_title"
+            android:textSize="@dimen/middle_l" 
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lottery_result_history_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_marginBottom="5dp" 
+        >
+    </LinearLayout>
+
+</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/none"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp" >
+
+ 
+
+        <LinearLayout
+            android:id="@+id/select_popwindow_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_white"
+            android:orientation="vertical"
+            android:paddingBottom="0.5dp"
+            android:paddingRight="0.5dp" >
+        </LinearLayout>
+   <!--      
+           <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/y11x5_number_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="10dp" >
+    </LinearLayout> -->
+
+</LinearLayout>

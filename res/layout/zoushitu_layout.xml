@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/top_banner"
+    	android:background="@drawable/top_bg"
+        >
+	    <FrameLayout
+	        android:id="@+id/zoushitu_top_menu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="@dimen/top_banner"
+	        android:foreground="@drawable/bg_btn_none_to_red_selector"
+	        >
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:gravity="center_vertical"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/zoushitu_top_menu_text"
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="1"
+			        android:paddingLeft="20dp"
+			        android:paddingRight="20dp"
+	                android:gravity="center"
+	                android:textColor="@color/white"
+	                android:textSize="@dimen/bigger_s" />
+	
+	            <ImageView
+	                android:layout_width="@dimen/title_icon_size"
+	                android:layout_height="@dimen/title_icon_size"
+	                android:layout_marginLeft="@dimen/margin_5"
+	                android:scaleType="fitCenter"
+	                android:src="@drawable/y11_title_button" />
+	        </LinearLayout>
+	    </FrameLayout>
+	    <ImageButton
+	        android:id="@+id/lotter_refresh_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:background="@color/none"
+	        android:layout_marginRight="10dp"
+	        android:gravity="center"
+	        android:src="@drawable/btn_refresh"
+	        android:scaleType="fitCenter"
+	         />
+    </RelativeLayout>
+
+    <com.zch.safelottery.pulltorefresh.PullToRefreshWebView
+        android:id="@+id/refreshable_webview"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+	<LinearLayout
+	    android:layout_width="0dp"
+	    android:layout_height="30dip"
+	    android:layout_marginRight="2dp"
+	    android:layout_marginTop="2dip"
+	    android:layout_weight="1"
+	    android:background="@drawable/shake"
+	    android:gravity="center_vertical" >
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:gravity="center_vertical"
+	        android:singleLine="true"
+		    android:layout_marginLeft="2dp"
+	        android:ellipsize="marquee"
+			android:marqueeRepeatLimit="marquee_forever"
+			android:focusable="true"
+	        android:text="摇晃手机，立即帮你机选一注哦！"
+	        android:textColor="#666666"
+	        android:textSize="@dimen/middle_m" />
+	</LinearLayout>
+	
+	<Button
+	    android:id="@+id/stock_choice_explain_button"
+	    android:layout_width="70dip"
+	    android:layout_height="30dip"
+	    android:layout_marginRight="2dip"
+	    android:layout_marginTop="2dip"
+	    android:background="@drawable/shuoming_button_bg_selector"
+	    android:text="玩法说明"
+	    android:textColor="#333333"
+	    android:textSize="@dimen/middle_m" />
+</LinearLayout>

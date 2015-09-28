@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/issue_detail_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical" >
+
+<!--         <TextView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:layout_marginLeft="@dimen/top_margin" -->
+<!--             android:gravity="center" -->
+<!--             android:text="期次详情" -->
+<!--             android:textColor="@color/white" -->
+<!--             android:textSize="@dimen/title" /> -->
+
+<!--         <Button -->
+<!--             android:id="@+id/issue_detail_to_buy_lottery" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_marginRight="10dp" -->
+<!--             android:background="@drawable/bg_btn_none_to_red_selector" -->
+<!--             android:gravity="center" -->
+<!--             android:maxLength="11" -->
+<!--             android:paddingLeft="@dimen/margin_15" -->
+<!--             android:paddingRight="@dimen/margin_15" -->
+<!--             android:text="购彩" -->
+<!--             android:textColor="@drawable/top_btn_txt_color_selector" -->
+<!--             android:textSize="@dimen/big_m" /> -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/issue_detail_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_grey"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/issue_detail_to_page_up"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bg_selector"
+            android:gravity="center" >
+
+            <!-- <ImageView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:src="@drawable/tab_nav_icon_shop" /> -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="上一期"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/issue_detail_to_page_next"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bg_selector"
+            android:gravity="center" >
+
+            <!-- <ImageView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:src="@drawable/shuangseqiu_queren" /> -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="下一期"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_s" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/issue_detail_bottom"
+        android:layout_below="@id/issue_detail_title" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/issue_detail_progress_bar"
+                style="@style/Widget.Sherlock.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+             <TextView
+                android:id="@+id/issue_detail_text_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据请重试"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/big_m"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/issue_detail_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/issue_detail_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buy_lottery_cz_bg_selector"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/issue_detail_icon"
+                    android:layout_width="53dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:scaleType="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="9"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="3dp" >
+
+                        <TextView
+                            android:id="@+id/issue_detail_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="双色球"
+                            android:textColor="@color/content_txt_red"
+                            android:textSize="@dimen/big_m" />
+
+                        <TextView
+                            android:id="@+id/issue_detail_issue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="3dp"
+                            android:text="第200125期"
+                            android:textColor="@color/buy_lottery_content_title"
+                            android:textSize="@dimen/big_m" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/issue_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="开奖时间：2012-02-12 21:50:10"
+                        android:textColor="@color/buy_lottery_content_title"
+                        android:textSize="@dimen/big_m" />
+
+                    <LinearLayout
+                        android:id="@+id/issue_detail_num_result_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_home_account_detail_old"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/issue_detail_prize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/issue_detail_bonus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

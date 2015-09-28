@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/index_page_table_item_bg_color" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/top_banner"
+            android:background="@drawable/top_bg" >
+
+            <TextView
+                android:id="@+id/buy_lottery_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/top_margin"
+                android:gravity="center"
+                android:text="常见问题解答"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:id="@+id/dialog_phone_show_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/phone_show_question1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            android:id="@+id/textView0"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="1.中大奖如何领取？"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_l" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expend_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <FrameLayout
+                    android:id="@+id/phone_show_question2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="2.中奖如何扣税？"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_l" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expend_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <FrameLayout
+                    android:id="@+id/phone_show_question3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="3.如何充值？"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_l" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expend_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <FrameLayout
+                    android:id="@+id/phone_show_question4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="4.充值有手续费吗？"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_l" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expend_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <FrameLayout
+                    android:id="@+id/phone_show_question5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/framelayout_foreground_cover_selector" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="5.取款多久能到账?"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/big_l" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/expend_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/style_show_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" >
+
+                    <FrameLayout
+                        android:id="@+id/normal_dialog_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_light_blue"
+                        android:foreground="@drawable/framelayout_foreground_cover_selector"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="45dp"
+                            android:drawableLeft="@drawable/icon_online_kefu"
+                            android:gravity="center"
+                            android:text="在线客服"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/bigger_s" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/normal_dialog_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_light_green"
+                        android:foreground="@drawable/framelayout_foreground_cover_selector"
+                        android:gravity="center_vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="45dp"
+                                android:drawableLeft="@drawable/icon_online_phone"
+                                android:gravity="center"
+                                android:text="拨打电话"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/bigger_s" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/index_page_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/register_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/register_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:text="账户注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:background="@drawable/bg_btn_none_to_red_selector"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@drawable/top_btn_txt_color_selector"
+            android:textSize="@dimen/big_m" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/register_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/register_title_bar"
+        android:layout_marginTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/band_user_illustrate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/bg_360"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/band_user_illustrate_text"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/big_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/register_layout_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/register_top_menu_manual_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_top_menu_left_bg_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="5dp"
+                        android:text=" 普通注册  "
+                        android:textColor="@drawable/tcolor_black_to_white_selector"
+                        android:textSize="@dimen/big_s" />
+
+                    <RadioButton
+                        android:id="@+id/register_key_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_top_menu_right_bg_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="5dp"
+                        android:text="优惠码注册"
+                        android:textColor="@drawable/tcolor_black_to_white_selector"
+                        android:textSize="@dimen/big_s" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:src="@drawable/line_xml" />
+
+            
+
+            <LinearLayout
+                android:id="@+id/register_layout_manual"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/register_layout_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="70dip"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dip"
+                        android:text="用户名"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_l" />
+
+                    <EditText
+                        android:id="@+id/register_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/register_username_text"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="2dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:gravity="center_vertical"
+                        android:hint="2-16个汉字/字母/数字"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_tint"
+                    	android:maxLength="16"
+                        android:textSize="@dimen/big_s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/register_layout_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="70dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="30dip"
+                        android:text="密码"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_l" />
+
+                    <EditText
+                        android:id="@+id/register_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:hint="6-16个字母/数字"
+                        android:imeOptions="actionNext"
+                    	android:maxLength="16"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_tint"
+                        android:textSize="@dimen/big_s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/register_layout_repassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/register_layout_repassword_text"
+                        android:layout_width="70dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="确认密码"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/big_l" />
+
+                    <EditText
+                        android:id="@+id/register_repassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/choice_charge_bg"
+                        android:hint="确认密码"
+                        android:imeOptions="actionDone"
+                    	android:maxLength="16"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_tint"
+                        android:textSize="@dimen/big_s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/register_key"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" 
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/register_layout_cardname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="70dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dip"
+                            android:text="优惠码"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/big_l" />
+
+                        <EditText
+                            android:id="@+id/register_key_etx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/choice_charge_bg"
+                            android:hint="优惠码"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColorHint="@color/text_tint"
+                            android:textSize="@dimen/big_s" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/register_key_obtain"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="90dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dp"
+                        android:autoLink="web"
+                        android:gravity="left"
+                        android:text="@string/youhuitext"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/middle_l" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/register_finish_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_top_red_to_darkred_selector"
+                    android:text=" 完 成 "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bigger_s" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
